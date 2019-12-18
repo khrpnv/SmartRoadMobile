@@ -153,7 +153,7 @@ extension ServicesViewController: ServicesViewControllerInput {
     hideActivityIndicator()
     self.services = stations
     if self.services.count == 0 {
-      showToast(message: "Nothing suitable found")
+      showToast(message: "Nothing suitable has been found")
     }
   }
 }

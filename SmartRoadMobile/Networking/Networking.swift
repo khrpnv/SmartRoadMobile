@@ -71,6 +71,10 @@ class Networking {
       let jsonObject = JSON(value)
       let jsonArray = jsonObject.arrayValue
       var services: [ServiceStation] = []
+      if jsonArray.count == 0 {
+        self?.servicesViewControllerInput?.didFinishGettingStations(stations: services)
+        return
+      }
       for index in 0..<jsonArray.count {
         let service = ServiceStation(object: jsonArray[index])
         guard let id = service.id else { return }
