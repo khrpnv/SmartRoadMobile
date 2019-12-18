@@ -9,16 +9,23 @@
 import UIKit
 
 class RoadTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+  
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var dataTextView: UITextView!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  func configureWith(road: Road) {
+    nameLabel.text = road.address
+    let description = "Description: \(road.description)\n"
+    let length = "Length: \(road.length)\n"
+    let amountOfLines = "Amount of lines: \(road.amountOfLines)\n"
+    let bandwidth = "Bandwidth: \(road.bandwidth)\n"
+    let maxSpeed = "Max allowed speed: \(road.maxAllowedSpeed) km\n"
+    let state = "State: \(road.state ?? "")"
+    dataTextView.text = description + length + amountOfLines + bandwidth + maxSpeed + state
+  }
+  
 }

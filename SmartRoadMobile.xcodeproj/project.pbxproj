@@ -3,27 +3,72 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56AAB008AC359BCB025F0A4C /* Pods_SmartRoadMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */; };
+		EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B1F23A926A80070143C /* LoginViewController.swift */; };
+		EA0B8B2823A92A330070143C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0B8B2A23A92A330070143C /* Localizable.strings */; };
+		EA0B8B2E23A92BB90070143C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B2D23A92BB90070143C /* Const.swift */; };
+		EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */; };
+		EA0B8B3523A949A00070143C /* LoginViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */; };
+		EA0B8B3723A949B40070143C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3623A949B40070143C /* Networking.swift */; };
+		EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3C23A94FC20070143C /* ServiceType.swift */; };
+		EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */; };
+		EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */; };
+		EA1212C323A9B61D0018CE0E /* AddServiceViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */; };
+		EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */; };
+		EA1212C823A9BFB60018CE0E /* ServicesViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */; };
+		EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */; };
+		EA1212D323A9C08F0018CE0E /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */; };
+		EA6B1F3823A9703A000B5510 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3723A9703A000B5510 /* User.swift */; };
+		EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3A23A980A5000B5510 /* MainViewController.swift */; };
+		EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */; };
 		EA7C4F8B23A92591001F93B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C4F8A23A92591001F93B3 /* AppDelegate.swift */; };
 		EA7C4F8D23A92591001F93B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C4F8C23A92591001F93B3 /* SceneDelegate.swift */; };
-		EA7C4F8F23A92591001F93B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C4F8E23A92591001F93B3 /* ViewController.swift */; };
 		EA7C4F9223A92591001F93B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9023A92591001F93B3 /* Main.storyboard */; };
 		EA7C4F9423A92593001F93B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9323A92593001F93B3 /* Assets.xcassets */; };
 		EA7C4F9723A92593001F93B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9523A92593001F93B3 /* LaunchScreen.storyboard */; };
+		EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */; };
+		EAF6E8BB23A9A2900040E910 /* RoadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */; };
+		EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8BC23A9A2A80040E910 /* Road.swift */; };
+		EAF6E8BF23A9A3630040E910 /* RoadsViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoadMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CB9B8A95AA2CE42CD3CE27 /* Pods-SmartRoadMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoadMobile.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		69E661D9335B70A898D87401 /* Pods-SmartRoadMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoadMobile.release.xcconfig"; path = "Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile.release.xcconfig"; sourceTree = "<group>"; };
+		EA0B8B1F23A926A80070143C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA0B8B2923A92A330070143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA0B8B2B23A92A5D0070143C /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA0B8B2D23A92BB90070143C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+imageAlignment.swift"; sourceTree = "<group>"; };
+		EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerInput.swift; sourceTree = "<group>"; };
+		EA0B8B3623A949B40070143C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		EA0B8B3C23A94FC20070143C /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStation.swift; sourceTree = "<group>"; };
+		EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewControllerInput.swift; sourceTree = "<group>"; };
+		EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewControllerInput.swift; sourceTree = "<group>"; };
+		EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		EA6B1F3723A9703A000B5510 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA6B1F3A23A980A5000B5510 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsViewController.swift; sourceTree = "<group>"; };
 		EA7C4F8723A92591001F93B3 /* SmartRoadMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRoadMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7C4F8A23A92591001F93B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA7C4F8C23A92591001F93B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA7C4F8E23A92591001F93B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA7C4F9123A92591001F93B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA7C4F9323A92593001F93B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7C4F9623A92593001F93B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA7C4F9823A92593001F93B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTableViewCell.swift; sourceTree = "<group>"; };
+		EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoadTableViewCell.xib; sourceTree = "<group>"; };
+		EAF6E8BC23A9A2A80040E910 /* Road.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
+		EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsViewControllerInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +76,161 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AAB008AC359BCB025F0A4C /* Pods_SmartRoadMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28A2C9D90E90CA8323791EF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F21A764CB493616BB8FE38A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69CB9B8A95AA2CE42CD3CE27 /* Pods-SmartRoadMobile.debug.xcconfig */,
+				69E661D9335B70A898D87401 /* Pods-SmartRoadMobile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA0B8B1C23A926620070143C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA1212C423A9BD910018CE0E /* ServicesViewController */,
+				EA1212BD23A9B1E10018CE0E /* AddServiceViewController */,
+				EA6B1F3E23A99155000B5510 /* RoadsViewController */,
+				EA6B1F3923A9805F000B5510 /* MainViewController */,
+				EA0B8B1E23A926870070143C /* LoginViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA0B8B1D23A926740070143C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA7C4F8A23A92591001F93B3 /* AppDelegate.swift */,
+				EA7C4F8C23A92591001F93B3 /* SceneDelegate.swift */,
+				EA7C4F9023A92591001F93B3 /* Main.storyboard */,
+				EA7C4F9323A92593001F93B3 /* Assets.xcassets */,
+				EA7C4F9523A92593001F93B3 /* LaunchScreen.storyboard */,
+				EA7C4F9823A92593001F93B3 /* Info.plist */,
+				EA0B8B2A23A92A330070143C /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA0B8B1E23A926870070143C /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B8B1F23A926A80070143C /* LoginViewController.swift */,
+				EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		EA0B8B2123A926F50070143C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B8B3623A949B40070143C /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA0B8B2223A927590070143C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA1212CD23A9C0560018CE0E /* ServiceTableViewController */,
+				EAF6E8B723A9A2670040E910 /* RoadTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA0B8B2323A927690070143C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B8B3C23A94FC20070143C /* ServiceType.swift */,
+				EA6B1F3723A9703A000B5510 /* User.swift */,
+				EAF6E8BC23A9A2A80040E910 /* Road.swift */,
+				EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA0B8B2C23A92B9D0070143C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B8B2F23A92C8B0070143C /* Extensions */,
+				EA0B8B2D23A92BB90070143C /* Const.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA0B8B2F23A92C8B0070143C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA1212BD23A9B1E10018CE0E /* AddServiceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */,
+				EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */,
+			);
+			path = AddServiceViewController;
+			sourceTree = "<group>";
+		};
+		EA1212C423A9BD910018CE0E /* ServicesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */,
+				EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */,
+			);
+			path = ServicesViewController;
+			sourceTree = "<group>";
+		};
+		EA1212CD23A9C0560018CE0E /* ServiceTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */,
+				EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */,
+			);
+			path = ServiceTableViewController;
+			sourceTree = "<group>";
+		};
+		EA6B1F3923A9805F000B5510 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B1F3A23A980A5000B5510 /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		EA6B1F3E23A99155000B5510 /* RoadsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */,
+				EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */,
+			);
+			path = RoadsViewController;
+			sourceTree = "<group>";
+		};
 		EA7C4F7E23A92591001F93B3 = {
 			isa = PBXGroup;
 			children = (
 				EA7C4F8923A92591001F93B3 /* SmartRoadMobile */,
 				EA7C4F8823A92591001F93B3 /* Products */,
+				2F21A764CB493616BB8FE38A /* Pods */,
+				28A2C9D90E90CA8323791EF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +245,23 @@
 		EA7C4F8923A92591001F93B3 /* SmartRoadMobile */ = {
 			isa = PBXGroup;
 			children = (
-				EA7C4F8A23A92591001F93B3 /* AppDelegate.swift */,
-				EA7C4F8C23A92591001F93B3 /* SceneDelegate.swift */,
-				EA7C4F8E23A92591001F93B3 /* ViewController.swift */,
-				EA7C4F9023A92591001F93B3 /* Main.storyboard */,
-				EA7C4F9323A92593001F93B3 /* Assets.xcassets */,
-				EA7C4F9523A92593001F93B3 /* LaunchScreen.storyboard */,
-				EA7C4F9823A92593001F93B3 /* Info.plist */,
+				EA0B8B2323A927690070143C /* Model */,
+				EA0B8B2223A927590070143C /* View */,
+				EA0B8B1C23A926620070143C /* Controller */,
+				EA0B8B2123A926F50070143C /* Networking */,
+				EA0B8B2C23A92B9D0070143C /* Helpers */,
+				EA0B8B1D23A926740070143C /* Supporting Files */,
 			);
 			path = SmartRoadMobile;
+			sourceTree = "<group>";
+		};
+		EAF6E8B723A9A2670040E910 /* RoadTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */,
+				EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */,
+			);
+			path = RoadTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7C4F9B23A92593001F93B3 /* Build configuration list for PBXNativeTarget "SmartRoadMobile" */;
 			buildPhases = (
+				2FD9A4ECF407121E13350E7D /* [CP] Check Pods Manifest.lock */,
 				EA7C4F8323A92591001F93B3 /* Sources */,
 				EA7C4F8423A92591001F93B3 /* Frameworks */,
 				EA7C4F8523A92591001F93B3 /* Resources */,
+				B2ADF02944D36A8952CAB8E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +308,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = EA7C4F7E23A92591001F93B3;
 			productRefGroup = EA7C4F8823A92591001F93B3 /* Products */;
@@ -126,6 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7C4F9723A92593001F93B3 /* LaunchScreen.storyboard in Resources */,
+				EA0B8B2823A92A330070143C /* Localizable.strings in Resources */,
+				EAF6E8BB23A9A2900040E910 /* RoadTableViewCell.xib in Resources */,
+				EA1212D323A9C08F0018CE0E /* ServiceTableViewCell.xib in Resources */,
 				EA7C4F9423A92593001F93B3 /* Assets.xcassets in Resources */,
 				EA7C4F9223A92591001F93B3 /* Main.storyboard in Resources */,
 			);
@@ -133,20 +336,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FD9A4ECF407121E13350E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartRoadMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2ADF02944D36A8952CAB8E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA7C4F8323A92591001F93B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7C4F8F23A92591001F93B3 /* ViewController.swift in Sources */,
+				EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */,
+				EAF6E8BF23A9A3630040E910 /* RoadsViewControllerInput.swift in Sources */,
+				EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */,
 				EA7C4F8B23A92591001F93B3 /* AppDelegate.swift in Sources */,
 				EA7C4F8D23A92591001F93B3 /* SceneDelegate.swift in Sources */,
+				EA0B8B3723A949B40070143C /* Networking.swift in Sources */,
+				EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */,
+				EA0B8B2E23A92BB90070143C /* Const.swift in Sources */,
+				EA6B1F3823A9703A000B5510 /* User.swift in Sources */,
+				EA1212C823A9BFB60018CE0E /* ServicesViewControllerInput.swift in Sources */,
+				EA1212C323A9B61D0018CE0E /* AddServiceViewControllerInput.swift in Sources */,
+				EA0B8B3523A949A00070143C /* LoginViewControllerInput.swift in Sources */,
+				EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */,
+				EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */,
+				EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */,
+				EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */,
+				EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */,
+				EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */,
+				EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */,
+				EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EA0B8B2A23A92A330070143C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0B8B2923A92A330070143C /* en */,
+				EA0B8B2B23A92A5D0070143C /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EA7C4F9023A92591001F93B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -170,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -282,6 +555,7 @@
 		};
 		EA7C4F9C23A92593001F93B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CB9B8A95AA2CE42CD3CE27 /* Pods-SmartRoadMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +574,7 @@
 		};
 		EA7C4F9D23A92593001F93B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69E661D9335B70A898D87401 /* Pods-SmartRoadMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

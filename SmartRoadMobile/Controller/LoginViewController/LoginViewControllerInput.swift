@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol LoginViewControllerInput: class {
+  func didFinishSuccessfully()
+  func didGetErrors(_ message: String?)
+}

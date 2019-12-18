@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol RoadsViewControllerInput: class {
+  func didLoadedRoads(roads: [Road])
+}

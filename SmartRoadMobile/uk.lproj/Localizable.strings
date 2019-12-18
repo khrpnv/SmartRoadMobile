@@ -5,3 +5,29 @@
   Created by Illia Khrypunov on 12/17/19.
   Copyright © 2019 Illia Khrypunov. All rights reserved.
 */
+
+"We'll never share your email with anyone else" = "Ці дані не будуть доступні жодному з користувачів";
+"ENG" = "УКР";
+"Email address" = "Введіть поштову адресу";
+"Password" = "Пароль";
+"Log In" = "Увійти";
+"Sign Up" = "Зареєструватись";
+"Input fields are empty" = "Поля для вводу пусті";
+"Wrong password" = "Неправильний пароль";
+"Menu" = "Меню";
+"Drivers" = "Водії";
+"Owners" = "Власники";
+"Roads" = "Дороги";
+"Amount of cars on road / time" = "Кількість авто на дорозі / час";
+"Cars/hour" = "Авто/години";
+"Statistics" = "Статистика";
+"Roads" = "Дороги";
+"Add service" = "Додати сервіс";
+"Name" = "Назва";
+"Description" = "Опис";
+"Latitude" = "Широта";
+"Longitude" = "Довгота";
+"Select type" = "Обрати тип";
+"Submit" = "Підтвердити";
+"Show on map" = "Показати на карті";
+

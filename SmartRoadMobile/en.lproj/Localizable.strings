@@ -5,3 +5,28 @@
   Created by Illia Khrypunov on 12/17/19.
   Copyright © 2019 Illia Khrypunov. All rights reserved.
 */
+
+"We'll never share your email with anyone else" = "We'll never share your email with anyone else";
+"ENG" = "ENG";
+"Email address" = "Email address";
+"Password" = "Password";
+"Log In" = "Log In";
+"Sign Up" = "Sign Up";
+"Input fields are empty" = "Input fields are empty";
+"Wrong password" = "Wrong password";
+"Menu" = "Menu";
+"Drivers" = "Drivers";
+"Owners" = "Owners";
+"Roads" = "Roads";
+"Amount of cars on road / time" = "Amount of cars on road / time";
+"Cars/hour" = "Cars/hour";
+"Statistics" = "Statistics";
+"Roads" = "Roads";
+"Add service" = "Add service";
+"Name" = "Name";
+"Description" = "Description";
+"Latitude" = "Latitude";
+"Longitude" = "Longitude";
+"Select type" = "Select type";
+"Submit" = "Submit";
+"Show on map" = "Show on map";

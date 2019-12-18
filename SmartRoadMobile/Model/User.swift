@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+struct User {
+  let email: String
+  let password: String
+  
+  init(email: String, password: String) {
+    self.email = email
+    self.password = password
+  }
+  
+  func convertToParameters() -> [String: Any] {
+    return [
+      "email": self.email,
+      "password": self.password
+    ]
+  }
+}
