@@ -152,6 +152,9 @@ extension ServicesViewController: ServicesViewControllerInput {
   func didFinishGettingStations(stations: [ServiceStation]) {
     hideActivityIndicator()
     self.services = stations
+    if self.services.count == 0 {
+      showToast(message: "Nothing suitable found")
+    }
   }
 }
 

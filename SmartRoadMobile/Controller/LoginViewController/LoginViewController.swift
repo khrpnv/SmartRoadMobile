@@ -138,6 +138,10 @@ extension LoginViewController: UITextFieldDelegate {
   func textFieldDidEndEditing(_ textField: UITextField) {
     textField.layer.borderWidth = 0
   }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+  }
 }
 
 // MARK: -
