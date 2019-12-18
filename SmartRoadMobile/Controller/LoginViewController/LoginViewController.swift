@@ -28,9 +28,6 @@ class LoginViewController: UIViewController {
     networkManager = Networking()
     setupView()
     setupDelegates()
-    
-    emailTextField.text = "illia.khrypunov@nure.ua"
-    passwordTextField.text = "Ilyakhrip14"
   }
   
   // MARK: - Actions
