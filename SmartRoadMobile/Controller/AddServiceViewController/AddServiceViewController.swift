@@ -30,6 +30,8 @@ class AddServiceViewController: UIViewController {
     networkManager = Networking()
     networkManager?.setAddServiceDelegate(addServiceViewControllerInput: self)
     networkManager?.getServices()
+    self.textFiledsDelegates()
+    
   }
   
   @IBAction func submitButtonPressed(_ sender: Any) {
@@ -76,6 +78,13 @@ private extension AddServiceViewController {
     styleButton(button: submitButton,
                 backgroundColor: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
                 textColor: .white)
+  }
+  
+  func textFiledsDelegates() {
+    nameTextField.delegate = self
+    descriptionTextField.delegate = self
+    latTextField.delegate = self
+    longTextField.delegate = self
   }
   
   func styleButton(button: UIButton, backgroundColor: UIColor, textColor: UIColor) {
@@ -127,5 +136,12 @@ extension AddServiceViewController: AddServiceViewControllerInput {
       showToast(message: message)
       cleanInputs()
     }
+  }
+}
+
+// MARK: -
+extension AddServiceViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
   }
 }
