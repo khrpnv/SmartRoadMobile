@@ -12,8 +12,6 @@ import iOSDropDown
 import Toast_Swift
 
 class AddServiceViewController: UIViewController {
-  
-  private var networkManager: Networking?
   private var serviceTypes: [ServiceType] = []
   private var selectedIndex: Int = -1
   private let gradientLayer = CAGradientLayer()
@@ -29,11 +27,10 @@ class AddServiceViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
-    networkManager = Networking()
-    networkManager?.setAddServiceDelegate(addServiceViewControllerInput: self)
-    networkManager?.getServices()
-    self.textFiledsDelegates()
-    
+    setupInputFieldsDelegates()
+    showActivityIndicator()
+    let serviceTypesManager = ServiceTypesManager(delegate: self)
+    serviceTypesManager.getAllServiceTypes()
   }
   
   @IBAction func submitButtonPressed(_ sender: Any) {
@@ -60,7 +57,8 @@ class AddServiceViewController: UIViewController {
       longtitude: longitude,
       type: selectedIndex)
     showActivityIndicator()
-    networkManager?.addService(service: serviceStation)
+    let serviceStationsManager = ServiceStationsManager(delegate: self)
+    serviceStationsManager.addService(service: serviceStation)
   }
   
   @IBAction func closeScreen(_ sender: Any) {
@@ -96,7 +94,7 @@ private extension AddServiceViewController {
     }
   }
   
-  func textFiledsDelegates() {
+  func setupInputFieldsDelegates() {
     nameTextField.delegate = self
     descriptionTextField.delegate = self
     latTextField.delegate = self
@@ -138,34 +136,44 @@ private extension AddServiceViewController {
   }
   
   func setupDropDown(placeholder: String) {
-  dropDown.rowBackgroundColor = .white
-  dropDown.arrowColor = .white
-  dropDown.textColor = .white
-  dropDown.rowHeight = 40
+    dropDown.rowBackgroundColor = .white
+    dropDown.textColor = .white
+    dropDown.rowHeight = 40
+    dropDown.placeholder = placeholder
   }
 }
 
-// MARK: - AddServiceViewControllerInput
-extension AddServiceViewController: AddServiceViewControllerInput {
-  func didFinishLoadingTypes(types: [ServiceType]) {
-    dropDown.optionArray = types.map { $0.typeName }
-    dropDown.optionIds = types.map { $0.id }
-    dropDown.didSelect { (selectedText, index, id) in
-      self.selectedIndex = id
-    }
-  }
+// MARK: - ServiceStationsManagerOutput
+extension AddServiceViewController: ServiceStationsManagerOutput {
+  func didFinishLoadingAllServices(services: [ServiceStation]) { return }
   
-  func didAddedSuccessfully() {
+  func didFinishGettingNearestEmptyServices(services: [ServiceStation]) { return }
+  
+  func didGetEmptyListOfStations() { return }
+  
+  func didAddServiceStationToBase() {
     hideActivityIndicator()
-    showToast(message: "Servcie was added successfully")
+    showToast(message: "Service was added successfully")
     cleanInputs()
   }
   
-  func didGetErrors(message: String?) {
+  func didGetErrorsWhileAddingServiceStation(_ message: String?) {
     hideActivityIndicator()
     if let message = message {
       showToast(message: message)
       cleanInputs()
+    }
+  }
+}
+
+// MARK: - ServiceTypesManagerOutput
+extension AddServiceViewController: ServiceTypesManagerOutput {
+  func didFinishLoadingTypes(serviceTypes: [ServiceType]) {
+    hideActivityIndicator()
+    dropDown.optionArray = serviceTypes.map { $0.typeName }
+    dropDown.optionIds = serviceTypes.map { $0.id }
+    dropDown.didSelect { (selectedText, index, id) in
+      self.selectedIndex = id
     }
   }
 }

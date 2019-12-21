@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-qF-hid">
-                        <rect key="frame" x="15" y="5" width="54" height="21.5"/>
+                        <rect key="frame" x="20" y="5" width="54" height="21.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-im-8dN">
-                        <rect key="frame" x="76" y="5.5" width="44.5" height="21"/>
+                        <rect key="frame" x="81" y="5.5" width="44.5" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                     <constraint firstItem="RAd-im-8dN" firstAttribute="centerY" secondItem="uBi-qF-hid" secondAttribute="centerY" id="K6w-fc-uLM"/>
                     <constraint firstItem="uBi-qF-hid" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SN4-ZM-TWi"/>
                     <constraint firstItem="RAd-im-8dN" firstAttribute="leading" secondItem="uBi-qF-hid" secondAttribute="trailing" constant="7" id="Wm9-25-lZK"/>
-                    <constraint firstItem="uBi-qF-hid" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="XEI-Ha-Bad"/>
+                    <constraint firstItem="uBi-qF-hid" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XEI-Ha-Bad"/>
                     <constraint firstAttribute="bottom" secondItem="H1w-Ja-bdk" secondAttribute="bottom" constant="5" id="u18-4g-4T0"/>
                 </constraints>
             </tableViewCellContentView>
@@ -52,6 +52,7 @@
             <connections>
                 <outlet property="dataTextView" destination="H1w-Ja-bdk" id="0ms-Pi-8kL"/>
                 <outlet property="nameLabel" destination="RAd-im-8dN" id="jOA-22-3Rs"/>
+                <outlet property="nameTitleLabel" destination="uBi-qF-hid" id="14d-Ih-dq5"/>
             </connections>
             <point key="canvasLocation" x="174.63768115942031" y="131.91964285714286"/>
         </tableViewCell>

@@ -12,16 +12,21 @@
 		EA0B8B2823A92A330070143C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0B8B2A23A92A330070143C /* Localizable.strings */; };
 		EA0B8B2E23A92BB90070143C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B2D23A92BB90070143C /* Const.swift */; };
 		EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */; };
-		EA0B8B3523A949A00070143C /* LoginViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */; };
-		EA0B8B3723A949B40070143C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3623A949B40070143C /* Networking.swift */; };
 		EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3C23A94FC20070143C /* ServiceType.swift */; };
 		EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */; };
 		EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */; };
-		EA1212C323A9B61D0018CE0E /* AddServiceViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */; };
 		EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */; };
-		EA1212C823A9BFB60018CE0E /* ServicesViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */; };
 		EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */; };
 		EA1212D323A9C08F0018CE0E /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */; };
+		EA4B02E223AE413200093637 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E123AE413200093637 /* AuthorizationManager.swift */; };
+		EA4B02E523AE41A000093637 /* AuthorizationManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E423AE41A000093637 /* AuthorizationManagerOutput.swift */; };
+		EA4B02E723AE42A900093637 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E623AE42A900093637 /* Command.swift */; };
+		EA4B02EA23AE4AE000093637 /* RoadsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E923AE4AE000093637 /* RoadsManager.swift */; };
+		EA4B02EC23AE4AF200093637 /* RoadsManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02EB23AE4AF200093637 /* RoadsManagerOutput.swift */; };
+		EA4B02EF23AE4FFE00093637 /* ServiceTypesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02EE23AE4FFE00093637 /* ServiceTypesManager.swift */; };
+		EA4B02F123AE500A00093637 /* ServiceTypesManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02F023AE500A00093637 /* ServiceTypesManagerOutput.swift */; };
+		EA4B02F423AE522E00093637 /* ServiceStationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02F323AE522E00093637 /* ServiceStationsManager.swift */; };
+		EA4B02F623AE523D00093637 /* ServiceStationsManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02F523AE523D00093637 /* ServiceStationsManagerOutput.swift */; };
 		EA6B1F3823A9703A000B5510 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3723A9703A000B5510 /* User.swift */; };
 		EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3A23A980A5000B5510 /* MainViewController.swift */; };
 		EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */; };
@@ -47,7 +52,6 @@
 		EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */; };
 		EAF6E8BB23A9A2900040E910 /* RoadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */; };
 		EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8BC23A9A2A80040E910 /* Road.swift */; };
-		EAF6E8BF23A9A3630040E910 /* RoadsViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,16 +63,21 @@
 		EA0B8B2B23A92A5D0070143C /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA0B8B2D23A92BB90070143C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+imageAlignment.swift"; sourceTree = "<group>"; };
-		EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerInput.swift; sourceTree = "<group>"; };
-		EA0B8B3623A949B40070143C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		EA0B8B3C23A94FC20070143C /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStation.swift; sourceTree = "<group>"; };
-		EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewControllerInput.swift; sourceTree = "<group>"; };
 		EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
-		EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewControllerInput.swift; sourceTree = "<group>"; };
 		EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		EA4B02E123AE413200093637 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		EA4B02E423AE41A000093637 /* AuthorizationManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManagerOutput.swift; sourceTree = "<group>"; };
+		EA4B02E623AE42A900093637 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		EA4B02E923AE4AE000093637 /* RoadsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsManager.swift; sourceTree = "<group>"; };
+		EA4B02EB23AE4AF200093637 /* RoadsManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsManagerOutput.swift; sourceTree = "<group>"; };
+		EA4B02EE23AE4FFE00093637 /* ServiceTypesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypesManager.swift; sourceTree = "<group>"; };
+		EA4B02F023AE500A00093637 /* ServiceTypesManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypesManagerOutput.swift; sourceTree = "<group>"; };
+		EA4B02F323AE522E00093637 /* ServiceStationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStationsManager.swift; sourceTree = "<group>"; };
+		EA4B02F523AE523D00093637 /* ServiceStationsManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStationsManagerOutput.swift; sourceTree = "<group>"; };
 		EA6B1F3723A9703A000B5510 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EA6B1F3A23A980A5000B5510 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +105,6 @@
 		EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTableViewCell.swift; sourceTree = "<group>"; };
 		EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoadTableViewCell.xib; sourceTree = "<group>"; };
 		EAF6E8BC23A9A2A80040E910 /* Road.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
-		EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsViewControllerInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				EA0B8B1F23A926A80070143C /* LoginViewController.swift */,
-				EA0B8B3423A949A00070143C /* LoginViewControllerInput.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -166,7 +173,11 @@
 		EA0B8B2123A926F50070143C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				EA0B8B3623A949B40070143C /* Networking.swift */,
+				EA4B02E623AE42A900093637 /* Command.swift */,
+				EA4B02E323AE418A00093637 /* AuthorizationManager */,
+				EA4B02E823AE4ACD00093637 /* RoadsManager */,
+				EA4B02F223AE521C00093637 /* ServiceStationsManager */,
+				EA4B02ED23AE4FE600093637 /* ServiceTypesManager */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -217,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */,
-				EA1212C223A9B61D0018CE0E /* AddServiceViewControllerInput.swift */,
 			);
 			path = AddServiceViewController;
 			sourceTree = "<group>";
@@ -225,7 +235,6 @@
 		EA1212C423A9BD910018CE0E /* ServicesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */,
 				EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */,
 			);
 			path = ServicesViewController;
@@ -240,6 +249,42 @@
 			path = ServiceTableViewController;
 			sourceTree = "<group>";
 		};
+		EA4B02E323AE418A00093637 /* AuthorizationManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B02E123AE413200093637 /* AuthorizationManager.swift */,
+				EA4B02E423AE41A000093637 /* AuthorizationManagerOutput.swift */,
+			);
+			path = AuthorizationManager;
+			sourceTree = "<group>";
+		};
+		EA4B02E823AE4ACD00093637 /* RoadsManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B02E923AE4AE000093637 /* RoadsManager.swift */,
+				EA4B02EB23AE4AF200093637 /* RoadsManagerOutput.swift */,
+			);
+			path = RoadsManager;
+			sourceTree = "<group>";
+		};
+		EA4B02ED23AE4FE600093637 /* ServiceTypesManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B02EE23AE4FFE00093637 /* ServiceTypesManager.swift */,
+				EA4B02F023AE500A00093637 /* ServiceTypesManagerOutput.swift */,
+			);
+			path = ServiceTypesManager;
+			sourceTree = "<group>";
+		};
+		EA4B02F223AE521C00093637 /* ServiceStationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B02F323AE522E00093637 /* ServiceStationsManager.swift */,
+				EA4B02F523AE523D00093637 /* ServiceStationsManagerOutput.swift */,
+			);
+			path = ServiceStationsManager;
+			sourceTree = "<group>";
+		};
 		EA6B1F3923A9805F000B5510 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				EA6B1F3C23A99152000B5510 /* RoadsViewController.swift */,
-				EAF6E8BE23A9A3630040E910 /* RoadsViewControllerInput.swift */,
 			);
 			path = RoadsViewController;
 			sourceTree = "<group>";
@@ -448,27 +492,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4B02F423AE522E00093637 /* ServiceStationsManager.swift in Sources */,
 				EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */,
-				EAF6E8BF23A9A3630040E910 /* RoadsViewControllerInput.swift in Sources */,
+				EA4B02EA23AE4AE000093637 /* RoadsManager.swift in Sources */,
 				EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */,
 				EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */,
 				EA7C4F8B23A92591001F93B3 /* AppDelegate.swift in Sources */,
 				EA7C4F8D23A92591001F93B3 /* SceneDelegate.swift in Sources */,
-				EA0B8B3723A949B40070143C /* Networking.swift in Sources */,
 				EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */,
+				EA4B02F623AE523D00093637 /* ServiceStationsManagerOutput.swift in Sources */,
 				EA0B8B2E23A92BB90070143C /* Const.swift in Sources */,
+				EA4B02E223AE413200093637 /* AuthorizationManager.swift in Sources */,
 				EAC3628423ABCAC800BC5CBD /* MenuCollectionViewCell.swift in Sources */,
+				EA4B02E523AE41A000093637 /* AuthorizationManagerOutput.swift in Sources */,
+				EA4B02F123AE500A00093637 /* ServiceTypesManagerOutput.swift in Sources */,
 				EA6B1F3823A9703A000B5510 /* User.swift in Sources */,
-				EA1212C823A9BFB60018CE0E /* ServicesViewControllerInput.swift in Sources */,
-				EA1212C323A9B61D0018CE0E /* AddServiceViewControllerInput.swift in Sources */,
 				EAC3628923ACD0CC00BC5CBD /* String+email.swift in Sources */,
+				EA4B02EC23AE4AF200093637 /* RoadsManagerOutput.swift in Sources */,
 				EAA26F7123AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift in Sources */,
-				EA0B8B3523A949A00070143C /* LoginViewControllerInput.swift in Sources */,
 				EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */,
 				EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */,
 				EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */,
+				EA4B02EF23AE4FFE00093637 /* ServiceTypesManager.swift in Sources */,
 				EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */,
 				EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */,
+				EA4B02E723AE42A900093637 /* Command.swift in Sources */,
 				EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */,
 				EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */,
 				EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */,

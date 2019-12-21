@@ -13,7 +13,6 @@ import Toast_Swift
 import CoreLocation
 
 class ServicesViewController: UIViewController {
-  private var networkManager: Networking?
   private var services: [ServiceStation] = [] {
     didSet {
       tableView.reloadData()
@@ -24,6 +23,7 @@ class ServicesViewController: UIViewController {
   private let locationManager = CLLocationManager()
   private var currentLat: Double = 32.23432
   private var currentLong: Double = 54.43435
+  private var range = 5
   
   public var isDriver: Bool = false
   
@@ -33,14 +33,18 @@ class ServicesViewController: UIViewController {
   @IBOutlet weak var submitButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var closeButton: UIButton!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var rangeStackView: UIStackView!
+  @IBOutlet weak var rangeSegmentedControl: UISegmentedControl!
+  @IBOutlet weak var dropDownTopMarginConstraint: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     setupTableView()
-    networkManager = Networking()
-    networkManager?.setServicesDelegate(servicesViewControllerInput: self)
-    networkManager?.getServices()
+    showActivityIndicator()
+    let serviceTypesManager = ServiceTypesManager(delegate: self)
+    serviceTypesManager.getAllServiceTypes()
     if isDriver {
       setupLocationManager()
     }
@@ -52,16 +56,32 @@ class ServicesViewController: UIViewController {
       return
     }
     showActivityIndicator()
+    let serviceStationsManager = ServiceStationsManager(delegate: self)
     switch isDriver {
     case true:
-      networkManager?.getNearestServices(id: selectedType, startLat: currentLat, startLong: currentLong, range: 7)
+      serviceStationsManager.getNearestEmptyServicesOfTypeWith(selectedType, startLat: currentLat, startLong: currentLong, range: range)
     case false:
-      networkManager?.getServiceById(id: selectedType)
+      serviceStationsManager.getAllServicesOfType(selectedType)
     }
   }
   
   @IBAction func closeScreen(_ sender: Any) {
     self.dismiss(animated: true, completion: nil)
+  }
+  
+  @IBAction func didSelectRange(_ sender: Any) {
+    switch rangeSegmentedControl.selectedSegmentIndex {
+    case 0:
+      range = 5
+    case 1:
+      range = 7
+    case 2:
+      range = 9
+    case 3:
+      range = 12
+    default:
+      break
+    }
   }
 }
 
@@ -71,10 +91,10 @@ private extension ServicesViewController {
     var placeholder: String = "Select type"
     switch LanguageManager.shared.currentLanguage {
     case .en:
-      self.title = isDriver ? "Nearest" : "Services"
+      self.titleLabel.text = isDriver ? "Nearest" : "Services"
       
     case .uk:
-      self.title = isDriver ? "Найближчі" : "Сервіси"
+      self.titleLabel.text = isDriver ? "Найближчі" : "Сервіси"
       placeholder = "Оберіть тип"
     default:
       break
@@ -93,6 +113,8 @@ private extension ServicesViewController {
     if let color = MenuItems.getItems().first(where: { $0.type == itemType})?.background {
       setGradientColor(top: color.top, bottom: color.bottom)
     }
+    rangeStackView.isHidden = !isDriver
+    dropDownTopMarginConstraint.constant = isDriver ? 8.0 : -25.0
   }
   
   func setupTableView() {
@@ -104,9 +126,10 @@ private extension ServicesViewController {
   
   func setupDropDown(placeholder: String) {
     dropDown.rowBackgroundColor = .white
-    dropDown.textColor = .white
+    dropDown.textColor = .black
     dropDown.rowHeight = 40
     dropDown.borderColor = .white
+    dropDown.placeholder = placeholder
   }
   
   func showActivityIndicator() {
@@ -144,6 +167,11 @@ private extension ServicesViewController {
     gradientLayer.locations = [0.0, 1.0]
     gradientLayer.frame = self.view.bounds
   }
+  
+  func updateDataSource(stations: [ServiceStation]) {
+    hideActivityIndicator()
+    self.services = stations
+  }
 }
 
 // MARK: - UITableViewDelegate
@@ -170,27 +198,41 @@ extension ServicesViewController: UITableViewDataSource {
   }
 }
 
-// MARK: - ServicesViewControllerInput
-extension ServicesViewController: ServicesViewControllerInput {
-  func didFinishGettingTypes(types: [ServiceType]) {
+// MARK: - ServiceStationsManagerOutput
+extension ServicesViewController: ServiceStationsManagerOutput {
+  func didFinishLoadingAllServices(services: [ServiceStation]) {
+    updateDataSource(stations: services)
+  }
+  
+  func didFinishGettingNearestEmptyServices(services: [ServiceStation]) {
+    updateDataSource(stations: services)
+  }
+  
+  func didGetEmptyListOfStations() {
+    hideActivityIndicator()
+    showToast(message: "Nothing suitable has been found")
+  }
+  
+  func didAddServiceStationToBase() { return }
+  
+  func didGetErrorsWhileAddingServiceStation(_ message: String?) { return }
+}
+
+// MARK: - ServiceTypesManagerOutput
+extension ServicesViewController: ServiceTypesManagerOutput {
+  func didFinishLoadingTypes(serviceTypes: [ServiceType]) {
+    hideActivityIndicator()
     dropDown.selectedRowColor = .lightGray
-    dropDown.optionArray = types.map { $0.typeName }
-    dropDown.optionIds = types.map { $0.id }
+    dropDown.optionArray = serviceTypes.map { $0.typeName }
+    dropDown.optionIds = serviceTypes.map { $0.id }
     dropDown.didSelect { (selectedText, index, id) in
       self.selectedType = id
     }
   }
-  
-  func didFinishGettingStations(stations: [ServiceStation]) {
-    hideActivityIndicator()
-    self.services = stations
-    if self.services.count == 0 {
-      showToast(message: "Nothing suitable has been found")
-    }
-  }
 }
 
-// MARK: -
+
+// MARK: - CLLocationManagerDelegate
 extension ServicesViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }

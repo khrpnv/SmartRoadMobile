@@ -11,7 +11,7 @@ import LanguageManager_iOS
 import Toast_Swift
 
 class LoginViewController: UIViewController {
-  
+  // MARK: - Properties
   private let gradientLayer = CAGradientLayer()
   private let topGradientColor = UIColor(red: 37.0/255.0,
                                          green: 37.0/255.0,
@@ -29,16 +29,11 @@ class LoginViewController: UIViewController {
   @IBOutlet private weak var passwordTextField: UITextField!
   @IBOutlet private weak var logInButton: UIButton!
   @IBOutlet private weak var signUpButton: UIButton!
-  @IBOutlet weak var logoWidthContraint: NSLayoutConstraint!
-  @IBOutlet weak var logoCenterConstraint: NSLayoutConstraint!
-  
-  
-  // MARK: - Properties
-  private var networkManager: Networking?
+  @IBOutlet private weak var logoWidthContraint: NSLayoutConstraint!
+  @IBOutlet private weak var logoCenterConstraint: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    networkManager = Networking()
     setupView()
     setupDelegates()
   }
@@ -66,10 +61,11 @@ class LoginViewController: UIViewController {
       return
     }
     
-    LanguageManager.shared.setLanguage(language: selectedLanguage,
-                                       viewControllerFactory: { title -> UIViewController in
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      return storyboard.instantiateInitialViewController()!
+    LanguageManager.shared.setLanguage(
+      language: selectedLanguage,
+      viewControllerFactory: { title -> UIViewController in
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateInitialViewController()!
     }) { view in
       view.alpha = 0
     }
@@ -84,9 +80,13 @@ class LoginViewController: UIViewController {
         showToast(message: "Input fields are empty")
         return
     }
+    guard email.isEmail else {
+      showToast(message: "Invalid email address")
+      return
+    }
     showActivityIndicator()
-    let user = User(email: email, password: password)
-    networkManager?.authorization(user: user, type: "login")
+    let authorizationManager = AuthorizationManager(delegate: self)
+    authorizationManager.logIn(user: User(email: email, password: password))
   }
   
   @IBAction func signupPressed(_ sender: Any) {
@@ -103,10 +103,9 @@ class LoginViewController: UIViewController {
       return
     }
     showActivityIndicator()
-    let user = User(email: email, password: password)
-    networkManager?.authorization(user: user, type: "register")
+    let authorizationManager = AuthorizationManager(delegate: self)
+    authorizationManager.signUp(user: User(email: email, password: password))
   }
-  
 }
 
 
@@ -131,7 +130,6 @@ private extension LoginViewController {
   func setupDelegates() {
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    networkManager?.setLoginDelegate(loginViewControllerInput: self)
   }
   
   func styleButton(button: UIButton, backgroundColor: UIColor, textColor: UIColor) {
@@ -174,6 +172,13 @@ private extension LoginViewController {
                                            name: UIResponder.keyboardWillHideNotification,
                                            object: nil)
   }
+  
+  func presentMainViewController() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
+    mainVC.modalPresentationStyle = .fullScreen
+    present(mainVC, animated: true)
+  }
 }
 
 
@@ -194,14 +199,16 @@ extension LoginViewController: UITextFieldDelegate {
   }
 }
 
-// MARK: - LoginViewControllerInput
-extension LoginViewController: LoginViewControllerInput {
-  func didFinishSuccessfully() {
+// MARK: - AuthorizationManagerOutput
+extension LoginViewController: AuthorizationManagerOutput {
+  func loggedUserIn() {
     hideActivityIndicator()
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
-    mainVC.modalPresentationStyle = .fullScreen
-    present(mainVC, animated: true)
+    presentMainViewController()
+  }
+  
+  func signedUserUp() {
+    hideActivityIndicator()
+    presentMainViewController()
   }
   
   func didGetErrors(_ message: String?) {

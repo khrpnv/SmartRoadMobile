@@ -12,7 +12,6 @@ import Charts
 import Toast_Swift
 
 class RoadsViewController: UIViewController {
-  private var networkManager: Networking?
   private var roads: [Road] = [] {
     didSet {
       tableView.reloadData()
@@ -30,10 +29,9 @@ class RoadsViewController: UIViewController {
     super.viewDidLoad()
     setupView()
     setupTableView()
-    networkManager = Networking()
-    networkManager?.setRoadsDelegate(roadsViewControllerInput: self)
+    let roadsManager = RoadsManager(delegate: self)
+    roadsManager.getRoadsData()
     showActivityIndicator()
-    networkManager?.getRoads()
   }
 
   @IBAction func closeScreen(_ sender: Any) {
@@ -109,18 +107,16 @@ private extension RoadsViewController {
   }
 }
 
-// MARK: - RoadsViewControllerInput
-extension RoadsViewController: RoadsViewControllerInput {
-  func didLoadedRoads(roads: [Road]) {
+// MARK: - RoadsManagerOutput
+extension RoadsViewController: RoadsManagerOutput {
+  func didFinishLoadingRoadsData(roads: [Road]) {
     hideActivityIndicator()
     self.roads = roads
   }
 }
 
 // MARK: - UITableViewDelegate
-extension RoadsViewController: UITableViewDelegate {
-  
-}
+extension RoadsViewController: UITableViewDelegate {}
 
 // MARK: - UITableViewDataSource
 extension RoadsViewController: UITableViewDataSource {
