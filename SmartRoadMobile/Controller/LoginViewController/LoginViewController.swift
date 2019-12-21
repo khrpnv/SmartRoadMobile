@@ -12,6 +12,16 @@ import Toast_Swift
 
 class LoginViewController: UIViewController {
   
+  private let gradientLayer = CAGradientLayer()
+  private let topGradientColor = UIColor(red: 37.0/255.0,
+                                         green: 37.0/255.0,
+                                         blue: 37.0/255.0,
+                                         alpha: 1.0)
+  private let bottomGradientColor = UIColor(red: 5.0/255.0,
+                                            green: 5.0/255.0,
+                                            blue: 5.0/255.0,
+                                            alpha: 1.0)
+  
   // MARK: - Outlets
   @IBOutlet private weak var switchLanguageButton: UIButton!
   @IBOutlet private weak var emailDescriptionLabel: UILabel!
@@ -19,6 +29,9 @@ class LoginViewController: UIViewController {
   @IBOutlet private weak var passwordTextField: UITextField!
   @IBOutlet private weak var logInButton: UIButton!
   @IBOutlet private weak var signUpButton: UIButton!
+  @IBOutlet weak var logoWidthContraint: NSLayoutConstraint!
+  @IBOutlet weak var logoCenterConstraint: NSLayoutConstraint!
+  
   
   // MARK: - Properties
   private var networkManager: Networking?
@@ -28,6 +41,16 @@ class LoginViewController: UIViewController {
     networkManager = Networking()
     setupView()
     setupDelegates()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setupNotificationsObserver()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    NotificationCenter.default.removeObserver(self)
   }
   
   // MARK: - Actions
@@ -75,6 +98,10 @@ class LoginViewController: UIViewController {
         showToast(message: "Input fields are empty")
         return
     }
+    guard email.isEmail else {
+      showToast(message: "Invalid email address")
+      return
+    }
     showActivityIndicator()
     let user = User(email: email, password: password)
     networkManager?.authorization(user: user, type: "register")
@@ -86,9 +113,10 @@ class LoginViewController: UIViewController {
 // MARK: - Private
 private extension LoginViewController {
   func setupView() {
-    if let icon = UIImage(named: Const.Image.languageIcon)?
-      .withTintColor(Const.Color.languageTint) {
+    if let icon = UIImage(named: Const.Image.languageIcon)?.withRenderingMode(.alwaysTemplate){
       switchLanguageButton.leftImage(image: icon, renderMode: .alwaysTemplate)
+      switchLanguageButton.titleLabel?.textColor = .white
+      switchLanguageButton.tintColor = .white
     }
     emailDescriptionLabel.textColor = Const.Color.lightGray
     styleButton(button: logInButton,
@@ -97,6 +125,7 @@ private extension LoginViewController {
     styleButton(button: signUpButton,
                 backgroundColor: .white,
                 textColor: Const.Color.languageTint)
+    setGradientColor(top: topGradientColor, bottom: bottomGradientColor)
   }
   
   func setupDelegates() {
@@ -124,6 +153,27 @@ private extension LoginViewController {
   func hideActivityIndicator() {
     self.view.hideToastActivity()
   }
+  
+  func setGradientColor(top: UIColor, bottom: UIColor) {
+    let colorTop =  top.cgColor
+    let colorBottom = bottom.cgColor
+    
+    gradientLayer.colors = [colorTop, colorBottom]
+    gradientLayer.locations = [0.0, 1.0]
+    gradientLayer.frame = self.view.bounds
+    view.layer.insertSublayer(gradientLayer, at: 0)
+  }
+  
+  func setupNotificationsObserver() {
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(willShowKeyboard),
+                                           name: UIResponder.keyboardWillShowNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(willHideKeyboard),
+                                           name: UIResponder.keyboardWillHideNotification,
+                                           object: nil)
+  }
 }
 
 
@@ -144,21 +194,39 @@ extension LoginViewController: UITextFieldDelegate {
   }
 }
 
-// MARK: -
+// MARK: - LoginViewControllerInput
 extension LoginViewController: LoginViewControllerInput {
   func didFinishSuccessfully() {
     hideActivityIndicator()
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
-    let navigationController = UINavigationController(rootViewController: mainVC)
-    navigationController.modalPresentationStyle = .fullScreen
-    present(navigationController, animated: true)
+    mainVC.modalPresentationStyle = .fullScreen
+    present(mainVC, animated: true)
   }
   
   func didGetErrors(_ message: String?) {
     hideActivityIndicator()
     if let message = message {
       showToast(message: message)
+    }
+  }
+}
+
+// MARK: - Keyboard notifications handler
+private extension LoginViewController {
+  @objc func willShowKeyboard() {
+    self.logoWidthContraint = self.logoWidthContraint.setMultiplier(multiplier: 0.4)
+    logoCenterConstraint.constant = -110
+    UIView.animate(withDuration: 3.0) {
+      self.view.layoutIfNeeded()
+    }
+  }
+  
+  @objc func willHideKeyboard() {
+    self.logoWidthContraint = self.logoWidthContraint.setMultiplier(multiplier: 0.65)
+    logoCenterConstraint.constant = 0
+    UIView.animate(withDuration: 3.0) {
+      self.view.layoutIfNeeded()
     }
   }
 }

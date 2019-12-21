@@ -19,6 +19,10 @@ struct Const {
     static let logout = "logout"
     static let english = "en"
     static let ukraine = "ukraine"
+    static let open = "openButton"
+    static let add = "addButton"
+    static let title = "title"
+    static let close = "close"
   }
   
   struct Color {

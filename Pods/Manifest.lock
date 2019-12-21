@@ -5,22 +5,18 @@ PODS:
   - Charts/Core (3.4.0)
   - iOSDropDown (0.3.4)
   - LanguageManager-iOS (1.2.0)
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.0)
-  - ZKCarousel (1.0.2)
+  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
   - iOSDropDown
   - LanguageManager-iOS
-  - SDWebImage
   - SwiftyJSON
   - Toast-Swift
-  - ZKCarousel
+  - UPCarouselFlowLayout
 
 SPEC REPOS:
   trunk:
@@ -28,21 +24,19 @@ SPEC REPOS:
     - Charts
     - iOSDropDown
     - LanguageManager-iOS
-    - SDWebImage
     - SwiftyJSON
     - Toast-Swift
-    - ZKCarousel
+    - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   LanguageManager-iOS: 516c4f088435c83cbdbddfc5179f88e4e0d39eb4
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
-  ZKCarousel: e54cdf2a5da6400c7e95bd6df5cbb001dc28883e
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 2f73e9365f3f2e607592daf489cd27be217c8200
+PODFILE CHECKSUM: afbdd54cd0f8ff27188729e0e8b3f5755bbc96f9
 
 COCOAPODS: 1.8.0

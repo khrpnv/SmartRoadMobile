@@ -8,10 +8,9 @@ target 'SmartRoadMobile' do
   # Pods for SmartRoadMobile
   pod 'LanguageManager-iOS'
   pod 'Alamofire'
-  pod 'ZKCarousel'
-  pod 'SDWebImage'
   pod 'SwiftyJSON'
   pod 'Toast-Swift'
   pod 'Charts'
   pod 'iOSDropDown'
+  pod 'UPCarouselFlowLayout'
 end

@@ -27,9 +27,12 @@ class ServicesViewController: UIViewController {
   
   public var isDriver: Bool = false
   
+  private let gradientLayer = CAGradientLayer()
+  
   @IBOutlet weak var dropDown: DropDown!
   @IBOutlet weak var submitButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var closeButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -56,22 +59,40 @@ class ServicesViewController: UIViewController {
       networkManager?.getServiceById(id: selectedType)
     }
   }
+  
+  @IBAction func closeScreen(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
 }
 
 // MARK: - Private
 private extension ServicesViewController {
   func setupView() {
+    var placeholder: String = "Select type"
     switch LanguageManager.shared.currentLanguage {
     case .en:
       self.title = isDriver ? "Nearest" : "Services"
+      
     case .uk:
       self.title = isDriver ? "Найближчі" : "Сервіси"
+      placeholder = "Оберіть тип"
     default:
       break
     }
+    setupDropDown(placeholder: placeholder)
     styleButton(button: submitButton,
                 backgroundColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1),
                 textColor: .white)
+    if let closeIcon = UIImage(named: Const.Image.close)?.withRenderingMode(.alwaysTemplate) {
+      closeButton.tintColor = .white
+      closeButton.setBackgroundImage(closeIcon, for: .normal)
+    }
+    self.tableView.backgroundColor = .clear
+    view.layer.insertSublayer(gradientLayer, at: 0)
+    let itemType: MenuItemType = isDriver ? .driver : .services
+    if let color = MenuItems.getItems().first(where: { $0.type == itemType})?.background {
+      setGradientColor(top: color.top, bottom: color.bottom)
+    }
   }
   
   func setupTableView() {
@@ -79,6 +100,13 @@ private extension ServicesViewController {
     tableView.dataSource = self
     let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: cellID)
+  }
+  
+  func setupDropDown(placeholder: String) {
+    dropDown.rowBackgroundColor = .white
+    dropDown.textColor = .white
+    dropDown.rowHeight = 40
+    dropDown.borderColor = .white
   }
   
   func showActivityIndicator() {
@@ -109,8 +137,12 @@ private extension ServicesViewController {
     }
   }
   
-  func getCoords() {
-    
+  func setGradientColor(top: UIColor, bottom: UIColor) {
+    let colorTop =  top.cgColor
+    let colorBottom = bottom.cgColor
+    gradientLayer.colors = [colorTop, colorBottom]
+    gradientLayer.locations = [0.0, 1.0]
+    gradientLayer.frame = self.view.bounds
   }
 }
 

@@ -30,6 +30,20 @@
 		EA7C4F9223A92591001F93B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9023A92591001F93B3 /* Main.storyboard */; };
 		EA7C4F9423A92593001F93B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9323A92593001F93B3 /* Assets.xcassets */; };
 		EA7C4F9723A92593001F93B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7C4F9523A92593001F93B3 /* LaunchScreen.storyboard */; };
+		EAA26F6A23AD0E5B000E53F6 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6423AD0E5A000E53F6 /* Oswald-Bold.ttf */; };
+		EAA26F6B23AD0E5B000E53F6 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6523AD0E5A000E53F6 /* Oswald-Light.ttf */; };
+		EAA26F6C23AD0E5B000E53F6 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6623AD0E5A000E53F6 /* Oswald-Regular.ttf */; };
+		EAA26F6D23AD0E5B000E53F6 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6723AD0E5A000E53F6 /* Oswald-ExtraLight.ttf */; };
+		EAA26F6E23AD0E5B000E53F6 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6823AD0E5A000E53F6 /* Oswald-Medium.ttf */; };
+		EAA26F6F23AD0E5B000E53F6 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA26F6923AD0E5A000E53F6 /* Oswald-SemiBold.ttf */; };
+		EAA26F7123AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA26F7023AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift */; };
+		EAA26F7323AD1ED8000E53F6 /* GradientColorCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA26F7223AD1ED8000E53F6 /* GradientColorCalculator.swift */; };
+		EAC3628423ABCAC800BC5CBD /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628223ABCAC800BC5CBD /* MenuCollectionViewCell.swift */; };
+		EAC3628523ABCAC800BC5CBD /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC3628323ABCAC800BC5CBD /* MenuCollectionViewCell.xib */; };
+		EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628623ABCCDD00BC5CBD /* MenuItem.swift */; };
+		EAC3628923ACD0CC00BC5CBD /* String+email.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628823ACD0CC00BC5CBD /* String+email.swift */; };
+		EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */; };
+		EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */; };
 		EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */; };
 		EAF6E8BB23A9A2900040E910 /* RoadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */; };
 		EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8BC23A9A2A80040E910 /* Road.swift */; };
@@ -65,6 +79,20 @@
 		EA7C4F9323A92593001F93B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7C4F9623A92593001F93B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA7C4F9823A92593001F93B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA26F6423AD0E5A000E53F6 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		EAA26F6523AD0E5A000E53F6 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		EAA26F6623AD0E5A000E53F6 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		EAA26F6723AD0E5A000E53F6 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EAA26F6823AD0E5A000E53F6 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		EAA26F6923AD0E5A000E53F6 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		EAA26F7023AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		EAA26F7223AD1ED8000E53F6 /* GradientColorCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorCalculator.swift; sourceTree = "<group>"; };
+		EAC3628223ABCAC800BC5CBD /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAC3628323ABCAC800BC5CBD /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAC3628623ABCCDD00BC5CBD /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EAC3628823ACD0CC00BC5CBD /* String+email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+email.swift"; sourceTree = "<group>"; };
+		EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+multiplier.swift"; sourceTree = "<group>"; };
+		EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+textAnimation.swift"; sourceTree = "<group>"; };
 		EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTableViewCell.swift; sourceTree = "<group>"; };
 		EAF6E8B923A9A2900040E910 /* RoadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoadTableViewCell.xib; sourceTree = "<group>"; };
 		EAF6E8BC23A9A2A80040E910 /* Road.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
@@ -146,6 +174,7 @@
 		EA0B8B2223A927590070143C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAC3628123ABCAAE00BC5CBD /* MenuCollectionViewCell */,
 				EA1212CD23A9C0560018CE0E /* ServiceTableViewController */,
 				EAF6E8B723A9A2670040E910 /* RoadTableViewCell */,
 			);
@@ -168,6 +197,7 @@
 			children = (
 				EA0B8B2F23A92C8B0070143C /* Extensions */,
 				EA0B8B2D23A92BB90070143C /* Const.swift */,
+				EAA26F7223AD1ED8000E53F6 /* GradientColorCalculator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -176,6 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */,
+				EAC3628823ACD0CC00BC5CBD /* String+email.swift */,
+				EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */,
+				EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,8 +225,8 @@
 		EA1212C423A9BD910018CE0E /* ServicesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */,
 				EA1212C723A9BFB60018CE0E /* ServicesViewControllerInput.swift */,
+				EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */,
 			);
 			path = ServicesViewController;
 			sourceTree = "<group>";
@@ -250,9 +283,34 @@
 				EA0B8B1C23A926620070143C /* Controller */,
 				EA0B8B2123A926F50070143C /* Networking */,
 				EA0B8B2C23A92B9D0070143C /* Helpers */,
+				EAA26F6323AD0E24000E53F6 /* Fonts */,
 				EA0B8B1D23A926740070143C /* Supporting Files */,
 			);
 			path = SmartRoadMobile;
+			sourceTree = "<group>";
+		};
+		EAA26F6323AD0E24000E53F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EAA26F6423AD0E5A000E53F6 /* Oswald-Bold.ttf */,
+				EAA26F6723AD0E5A000E53F6 /* Oswald-ExtraLight.ttf */,
+				EAA26F6523AD0E5A000E53F6 /* Oswald-Light.ttf */,
+				EAA26F6823AD0E5A000E53F6 /* Oswald-Medium.ttf */,
+				EAA26F6623AD0E5A000E53F6 /* Oswald-Regular.ttf */,
+				EAA26F6923AD0E5A000E53F6 /* Oswald-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EAC3628123ABCAAE00BC5CBD /* MenuCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAC3628223ABCAC800BC5CBD /* MenuCollectionViewCell.swift */,
+				EAC3628323ABCAC800BC5CBD /* MenuCollectionViewCell.xib */,
+				EAC3628623ABCCDD00BC5CBD /* MenuItem.swift */,
+				EAA26F7023AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift */,
+			);
+			path = MenuCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		EAF6E8B723A9A2670040E910 /* RoadTableViewCell */ = {
@@ -325,11 +383,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC3628523ABCAC800BC5CBD /* MenuCollectionViewCell.xib in Resources */,
 				EA7C4F9723A92593001F93B3 /* LaunchScreen.storyboard in Resources */,
 				EA0B8B2823A92A330070143C /* Localizable.strings in Resources */,
+				EAA26F6B23AD0E5B000E53F6 /* Oswald-Light.ttf in Resources */,
+				EAA26F6A23AD0E5B000E53F6 /* Oswald-Bold.ttf in Resources */,
+				EAA26F6D23AD0E5B000E53F6 /* Oswald-ExtraLight.ttf in Resources */,
+				EAA26F6C23AD0E5B000E53F6 /* Oswald-Regular.ttf in Resources */,
 				EAF6E8BB23A9A2900040E910 /* RoadTableViewCell.xib in Resources */,
 				EA1212D323A9C08F0018CE0E /* ServiceTableViewCell.xib in Resources */,
+				EAA26F6E23AD0E5B000E53F6 /* Oswald-Medium.ttf in Resources */,
 				EA7C4F9423A92593001F93B3 /* Assets.xcassets in Resources */,
+				EAA26F6F23AD0E5B000E53F6 /* Oswald-SemiBold.ttf in Resources */,
 				EA7C4F9223A92591001F93B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +451,18 @@
 				EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */,
 				EAF6E8BF23A9A3630040E910 /* RoadsViewControllerInput.swift in Sources */,
 				EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */,
+				EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */,
 				EA7C4F8B23A92591001F93B3 /* AppDelegate.swift in Sources */,
 				EA7C4F8D23A92591001F93B3 /* SceneDelegate.swift in Sources */,
 				EA0B8B3723A949B40070143C /* Networking.swift in Sources */,
 				EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */,
 				EA0B8B2E23A92BB90070143C /* Const.swift in Sources */,
+				EAC3628423ABCAC800BC5CBD /* MenuCollectionViewCell.swift in Sources */,
 				EA6B1F3823A9703A000B5510 /* User.swift in Sources */,
 				EA1212C823A9BFB60018CE0E /* ServicesViewControllerInput.swift in Sources */,
 				EA1212C323A9B61D0018CE0E /* AddServiceViewControllerInput.swift in Sources */,
+				EAC3628923ACD0CC00BC5CBD /* String+email.swift in Sources */,
+				EAA26F7123AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift in Sources */,
 				EA0B8B3523A949A00070143C /* LoginViewControllerInput.swift in Sources */,
 				EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */,
 				EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */,
@@ -401,8 +470,11 @@
 				EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */,
 				EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */,
 				EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */,
+				EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */,
+				EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */,
 				EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */,
 				EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */,
+				EAA26F7323AD1ED8000E53F6 /* GradientColorCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

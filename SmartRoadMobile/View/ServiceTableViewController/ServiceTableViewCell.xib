@@ -36,7 +36,7 @@
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Exc-mS-MDe">
                         <rect key="frame" x="118.5" y="27" width="233.5" height="50"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="zHz-08-bx3"/>
                         </constraints>
@@ -71,6 +71,7 @@
                     <constraint firstItem="ImR-nc-sLp" firstAttribute="top" secondItem="Exc-mS-MDe" secondAttribute="bottom" constant="10" id="yuu-X2-vUf"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionTextView" destination="Exc-mS-MDe" id="QLA-5n-MUI"/>

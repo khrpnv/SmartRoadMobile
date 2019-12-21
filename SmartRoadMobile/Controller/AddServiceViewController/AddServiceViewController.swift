@@ -16,13 +16,15 @@ class AddServiceViewController: UIViewController {
   private var networkManager: Networking?
   private var serviceTypes: [ServiceType] = []
   private var selectedIndex: Int = -1
+  private let gradientLayer = CAGradientLayer()
   
   @IBOutlet private weak var nameTextField: UITextField!
   @IBOutlet private weak var descriptionTextField: UITextField!
   @IBOutlet private weak var latTextField: UITextField!
   @IBOutlet private weak var longTextField: UITextField!
   @IBOutlet private weak var dropDown: DropDown!
-  @IBOutlet weak var submitButton: UIButton!
+  @IBOutlet private weak var submitButton: UIButton!
+  @IBOutlet private weak var closeButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -61,23 +63,37 @@ class AddServiceViewController: UIViewController {
     networkManager?.addService(service: serviceStation)
   }
   
+  @IBAction func closeScreen(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
   
 }
 
 // MARK: - Private
 private extension AddServiceViewController {
   func setupView() {
+    var placeholder: String = "Select type"
     switch LanguageManager.shared.currentLanguage {
     case .en:
       self.title = "Add service"
     case .uk:
       self.title = "Додати сервіс"
+      placeholder = "Оберіть тип"
     default:
       break
     }
     styleButton(button: submitButton,
                 backgroundColor: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
                 textColor: .white)
+    setupDropDown(placeholder: placeholder)
+    view.layer.insertSublayer(gradientLayer, at: 0)
+    if let closeIcon = UIImage(named: Const.Image.close)?.withRenderingMode(.alwaysTemplate) {
+      closeButton.tintColor = .white
+      closeButton.setBackgroundImage(closeIcon, for: .normal)
+    }
+    if let color = MenuItems.getItems().first(where: { $0.type == .addService})?.background {
+      setGradientColor(top: color.top, bottom: color.bottom)
+    }
   }
   
   func textFiledsDelegates() {
@@ -112,9 +128,24 @@ private extension AddServiceViewController {
     longTextField.text = ""
     selectedIndex = -1
   }
+  
+  func setGradientColor(top: UIColor, bottom: UIColor) {
+    let colorTop =  top.cgColor
+    let colorBottom = bottom.cgColor
+    gradientLayer.colors = [colorTop, colorBottom]
+    gradientLayer.locations = [0.0, 1.0]
+    gradientLayer.frame = self.view.bounds
+  }
+  
+  func setupDropDown(placeholder: String) {
+  dropDown.rowBackgroundColor = .white
+  dropDown.arrowColor = .white
+  dropDown.textColor = .white
+  dropDown.rowHeight = 40
+  }
 }
 
-// MARK: -
+// MARK: - AddServiceViewControllerInput
 extension AddServiceViewController: AddServiceViewControllerInput {
   func didFinishLoadingTypes(types: [ServiceType]) {
     dropDown.optionArray = types.map { $0.typeName }
@@ -139,7 +170,7 @@ extension AddServiceViewController: AddServiceViewControllerInput {
   }
 }
 
-// MARK: -
+// MARK: - UITextFieldDelegate
 extension AddServiceViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()

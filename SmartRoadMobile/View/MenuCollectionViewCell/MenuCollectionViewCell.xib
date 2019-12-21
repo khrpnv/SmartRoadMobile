@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="SmartRoadMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htx-iW-yEG">
+                        <rect key="frame" x="10" y="15" width="280" height="370"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-gg-uWV">
+                                <rect key="frame" x="25" y="25" width="189" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXG-zd-PiO">
+                                <rect key="frame" x="199" y="289" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sXG-zd-PiO" secondAttribute="height" multiplier="1:1" id="qeT-DG-dLR"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="openButton"/>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Ojk-yH-WVP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-75-SHR">
+                                <rect key="frame" x="20" y="66.5" width="240" height="192.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sXG-zd-PiO" firstAttribute="top" secondItem="gKm-75-SHR" secondAttribute="bottom" constant="30" id="4gx-Iy-QDL"/>
+                            <constraint firstAttribute="trailing" secondItem="gKm-75-SHR" secondAttribute="trailing" constant="20" id="7u2-zW-q6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="sXG-zd-PiO" secondAttribute="trailing" constant="25" id="CEO-5K-EsG"/>
+                            <constraint firstItem="hnJ-gg-uWV" firstAttribute="leading" secondItem="htx-iW-yEG" secondAttribute="leading" constant="25" id="GF1-X1-dfP"/>
+                            <constraint firstItem="sXG-zd-PiO" firstAttribute="width" secondItem="htx-iW-yEG" secondAttribute="width" multiplier="0.2" id="GSc-OY-rW8"/>
+                            <constraint firstItem="gKm-75-SHR" firstAttribute="top" secondItem="hnJ-gg-uWV" secondAttribute="bottom" constant="2" id="Mt6-eJ-Eal"/>
+                            <constraint firstItem="hnJ-gg-uWV" firstAttribute="top" secondItem="htx-iW-yEG" secondAttribute="top" constant="25" id="R2o-2c-Zhw"/>
+                            <constraint firstItem="gKm-75-SHR" firstAttribute="leading" secondItem="hnJ-gg-uWV" secondAttribute="leading" constant="-5" id="eaf-H0-HEq"/>
+                            <constraint firstAttribute="bottom" secondItem="sXG-zd-PiO" secondAttribute="bottom" constant="25" id="gA4-ab-OVQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="htx-iW-yEG" secondAttribute="bottom" constant="15" id="AC1-Xv-cIX"/>
+                <constraint firstItem="htx-iW-yEG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="NVz-U0-DHJ"/>
+                <constraint firstAttribute="trailing" secondItem="htx-iW-yEG" secondAttribute="trailing" constant="10" id="Pys-Kf-wRr"/>
+                <constraint firstItem="htx-iW-yEG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="r81-wr-aIa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="349" height="312"/>
+            <connections>
+                <outlet property="button" destination="sXG-zd-PiO" id="A5l-3e-ex6"/>
+                <outlet property="cardDescriptionTextView" destination="gKm-75-SHR" id="ZrG-FD-fWV"/>
+                <outlet property="mainView" destination="htx-iW-yEG" id="zRA-lu-gyF"/>
+                <outlet property="titleLabel" destination="hnJ-gg-uWV" id="92n-XE-VSJ"/>
+            </connections>
+            <point key="canvasLocation" x="212.31884057971016" y="123.88392857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="openButton" width="240" height="240"/>
+    </resources>
+</document>
