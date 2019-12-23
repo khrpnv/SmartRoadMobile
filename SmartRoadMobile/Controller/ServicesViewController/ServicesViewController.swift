@@ -186,7 +186,7 @@ extension ServicesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return isDriver ? 150 : 185
+    return isDriver ? 135 : 185
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
