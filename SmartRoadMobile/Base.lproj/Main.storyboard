@@ -567,20 +567,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5T-0N-Egk">
-                                <rect key="frame" x="374" y="54" width="30" height="30"/>
+                                <rect key="frame" x="379" y="54" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2JR-t5-AaM"/>
-                                    <constraint firstAttribute="width" constant="30" id="UoP-8d-jiU"/>
+                                    <constraint firstAttribute="height" constant="20" id="2JR-t5-AaM"/>
+                                    <constraint firstAttribute="width" constant="20" id="UoP-8d-jiU"/>
                                 </constraints>
                                 <connections>
                                     <action selector="closeScreen:" destination="FAd-54-5zV" eventType="touchUpInside" id="eII-Yo-SWd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exc-AR-vG6">
-                                <rect key="frame" x="10" y="51.5" width="35" height="35"/>
+                                <rect key="frame" x="15" y="51.5" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="PXd-oh-yUq"/>
-                                    <constraint firstAttribute="width" constant="35" id="Pss-39-0Zl"/>
+                                    <constraint firstAttribute="height" constant="25" id="PXd-oh-yUq"/>
+                                    <constraint firstAttribute="width" constant="25" id="Pss-39-0Zl"/>
                                 </constraints>
                                 <connections>
                                     <action selector="showInfo:" destination="FAd-54-5zV" eventType="touchUpInside" id="5jq-5V-rSf"/>
@@ -590,12 +590,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="exc-AR-vG6" firstAttribute="centerY" secondItem="V5T-0N-Egk" secondAttribute="centerY" id="EaK-CB-iVM"/>
-                            <constraint firstItem="CmT-2b-sl1" firstAttribute="trailing" secondItem="V5T-0N-Egk" secondAttribute="trailing" constant="10" id="M98-8g-f47"/>
+                            <constraint firstItem="CmT-2b-sl1" firstAttribute="trailing" secondItem="V5T-0N-Egk" secondAttribute="trailing" constant="15" id="M98-8g-f47"/>
                             <constraint firstItem="hnI-GE-leI" firstAttribute="leading" secondItem="CmT-2b-sl1" secondAttribute="leading" id="STh-fX-GaU"/>
                             <constraint firstAttribute="bottom" secondItem="hnI-GE-leI" secondAttribute="bottom" id="T8A-RT-0GZ"/>
                             <constraint firstItem="hnI-GE-leI" firstAttribute="top" secondItem="Nbd-Vd-L47" secondAttribute="top" id="YRr-oF-TCr"/>
                             <constraint firstItem="CmT-2b-sl1" firstAttribute="trailing" secondItem="hnI-GE-leI" secondAttribute="trailing" id="e9o-Sk-Q4c"/>
-                            <constraint firstItem="exc-AR-vG6" firstAttribute="leading" secondItem="CmT-2b-sl1" secondAttribute="leading" constant="10" id="efi-LF-daX"/>
+                            <constraint firstItem="exc-AR-vG6" firstAttribute="leading" secondItem="CmT-2b-sl1" secondAttribute="leading" constant="15" id="efi-LF-daX"/>
                             <constraint firstItem="V5T-0N-Egk" firstAttribute="top" secondItem="CmT-2b-sl1" secondAttribute="top" constant="10" id="y9f-TQ-NHM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CmT-2b-sl1"/>
