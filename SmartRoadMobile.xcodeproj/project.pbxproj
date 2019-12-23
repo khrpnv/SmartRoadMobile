@@ -13,11 +13,14 @@
 		EA0B8B2E23A92BB90070143C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B2D23A92BB90070143C /* Const.swift */; };
 		EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */; };
 		EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B3C23A94FC20070143C /* ServiceType.swift */; };
+		EA0E4FCF23B10EE80023DB2F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0E4FCE23B10EE80023DB2F /* MapKit.framework */; };
+		EA0E4FD223B10F5A0023DB2F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E4FD123B10F5A0023DB2F /* MapViewController.swift */; };
 		EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */; };
 		EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */; };
 		EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */; };
 		EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */; };
 		EA1212D323A9C08F0018CE0E /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */; };
+		EA3AE02723B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3AE02623B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift */; };
 		EA4B02E223AE413200093637 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E123AE413200093637 /* AuthorizationManager.swift */; };
 		EA4B02E523AE41A000093637 /* AuthorizationManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E423AE41A000093637 /* AuthorizationManagerOutput.swift */; };
 		EA4B02E723AE42A900093637 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B02E623AE42A900093637 /* Command.swift */; };
@@ -47,6 +50,8 @@
 		EAC3628523ABCAC800BC5CBD /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC3628323ABCAC800BC5CBD /* MenuCollectionViewCell.xib */; };
 		EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628623ABCCDD00BC5CBD /* MenuItem.swift */; };
 		EAC3628923ACD0CC00BC5CBD /* String+email.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628823ACD0CC00BC5CBD /* String+email.swift */; };
+		EACD37B823B124BD004764AA /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD37B723B124BD004764AA /* RouteInfo.swift */; };
+		EACD37BA23B1258D004764AA /* Double+round.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD37B923B1258D004764AA /* Double+round.swift */; };
 		EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */; };
 		EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */; };
 		EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */; };
@@ -64,11 +69,14 @@
 		EA0B8B2D23A92BB90070143C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		EA0B8B3023A92CA10070143C /* UIButton+imageAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+imageAlignment.swift"; sourceTree = "<group>"; };
 		EA0B8B3C23A94FC20070143C /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		EA0E4FCE23B10EE80023DB2F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA0E4FD123B10F5A0023DB2F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EA1212BE23A9B20E0018CE0E /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		EA1212C023A9B3CF0018CE0E /* ServiceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStation.swift; sourceTree = "<group>"; };
 		EA1212C523A9BDA60018CE0E /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		EA3AE02623B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		EA4B02E123AE413200093637 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		EA4B02E423AE41A000093637 /* AuthorizationManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManagerOutput.swift; sourceTree = "<group>"; };
 		EA4B02E623AE42A900093637 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 		EAC3628323ABCAC800BC5CBD /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAC3628623ABCCDD00BC5CBD /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		EAC3628823ACD0CC00BC5CBD /* String+email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+email.swift"; sourceTree = "<group>"; };
+		EACD37B723B124BD004764AA /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
+		EACD37B923B1258D004764AA /* Double+round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+round.swift"; sourceTree = "<group>"; };
 		EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+multiplier.swift"; sourceTree = "<group>"; };
 		EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+textAnimation.swift"; sourceTree = "<group>"; };
 		EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0E4FCF23B10EE80023DB2F /* MapKit.framework in Frameworks */,
 				56AAB008AC359BCB025F0A4C /* Pods_SmartRoadMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +133,7 @@
 		28A2C9D90E90CA8323791EF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA0E4FCE23B10EE80023DB2F /* MapKit.framework */,
 				1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +151,7 @@
 		EA0B8B1C23A926620070143C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EA0E4FD023B10F410023DB2F /* MapViewController */,
 				EA1212C423A9BD910018CE0E /* ServicesViewController */,
 				EA1212BD23A9B1E10018CE0E /* AddServiceViewController */,
 				EA6B1F3E23A99155000B5510 /* RoadsViewController */,
@@ -220,8 +233,18 @@
 				EAC3628823ACD0CC00BC5CBD /* String+email.swift */,
 				EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */,
 				EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */,
+				EACD37B923B1258D004764AA /* Double+round.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA0E4FD023B10F410023DB2F /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E4FD123B10F5A0023DB2F /* MapViewController.swift */,
+				EACD37B723B124BD004764AA /* RouteInfo.swift */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		EA1212BD23A9B1E10018CE0E /* AddServiceViewController */ = {
@@ -245,6 +268,7 @@
 			children = (
 				EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */,
 				EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */,
+				EA3AE02623B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift */,
 			);
 			path = ServiceTableViewController;
 			sourceTree = "<group>";
@@ -498,6 +522,7 @@
 				EA1212C123A9B3CF0018CE0E /* ServiceStation.swift in Sources */,
 				EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */,
 				EA7C4F8B23A92591001F93B3 /* AppDelegate.swift in Sources */,
+				EACD37BA23B1258D004764AA /* Double+round.swift in Sources */,
 				EA7C4F8D23A92591001F93B3 /* SceneDelegate.swift in Sources */,
 				EA1212C623A9BDA60018CE0E /* ServicesViewController.swift in Sources */,
 				EA4B02F623AE523D00093637 /* ServiceStationsManagerOutput.swift in Sources */,
@@ -513,13 +538,16 @@
 				EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */,
 				EA6B1F3D23A99152000B5510 /* RoadsViewController.swift in Sources */,
 				EA0B8B3123A92CA10070143C /* UIButton+imageAlignment.swift in Sources */,
+				EACD37B823B124BD004764AA /* RouteInfo.swift in Sources */,
 				EA4B02EF23AE4FFE00093637 /* ServiceTypesManager.swift in Sources */,
+				EA0E4FD223B10F5A0023DB2F /* MapViewController.swift in Sources */,
 				EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */,
 				EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */,
 				EA4B02E723AE42A900093637 /* Command.swift in Sources */,
 				EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */,
 				EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */,
 				EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */,
+				EA3AE02723B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift in Sources */,
 				EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */,
 				EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */,
 				EAA26F7323AD1ED8000E53F6 /* GradientColorCalculator.swift in Sources */,

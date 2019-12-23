@@ -186,26 +186,61 @@ extension ServicesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 150
+    return isDriver ? 150 : 185
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ServiceTableViewCell else {
       fatalError("No such cell")
     }
-    cell.configureWith(serviceStation: services[indexPath.row])
+    cell.configureWith(serviceStation: services[indexPath.row], delegate: self)
     return cell
   }
 }
 
 // MARK: - ServiceStationsManagerOutput
 extension ServicesViewController: ServiceStationsManagerOutput {
+  func didGetAmountOfEmptyPlacesForStation(amount: Int) {
+    hideActivityIndicator()
+    let language = LanguageManager.shared.currentLanguage
+    let title = language == .en ? "Availability" : "Доступність"
+    var message = ""
+    if amount == 0 {
+      switch language {
+      case .en:
+        message = "Unfortunately, there are no empty places eveilable at the service."
+      default:
+        message = "На жаль, усі місця на даній станції зайняті."
+      }
+    } else {
+      switch language {
+      case .en:
+        message = "There are \(amount) places available at the service station. We're waiting for you here!"
+      default:
+        var places = "місць"
+        if amount == 1 {
+          places = "місце"
+        } else if amount > 1 && amount < 5 {
+          places = "місця"
+        }
+        message = "На даній станції обслуговування доступно \(amount) \(places). Чекаємо на Вас!"
+      }
+    }
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    alert.addAction(action)
+    self.present(alert, animated: true, completion: nil)
+  }
+  
   func didFinishLoadingAllServices(services: [ServiceStation]) {
     updateDataSource(stations: services)
   }
   
   func didFinishGettingNearestEmptyServices(services: [ServiceStation]) {
     updateDataSource(stations: services)
+    if services.count == 0 {
+      showToast(message: "Nothing suitable has been found")
+    }
   }
   
   func didGetEmptyListOfStations() {
@@ -231,12 +266,69 @@ extension ServicesViewController: ServiceTypesManagerOutput {
   }
 }
 
-
 // MARK: - CLLocationManagerDelegate
 extension ServicesViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
     currentLat = Double(locValue.latitude)
     currentLong = Double(locValue.longitude)
+  }
+}
+
+// MARK: - ServiceTableViewCellDelegate
+extension ServicesViewController: ServiceTableViewCellDelegate {
+  func showMapsAlertActionForStation(_ station: ServiceStation) {
+    let currentLanguage = LanguageManager.shared.currentLanguage
+    let title = currentLanguage == .en ? "Show on map" : "Показати на карті"
+    let message = currentLanguage == .en ? "Choose where to show location of selected service station." : "Оберіть де відобразити місцезнаходження обраної станції обслуговування."
+    
+    let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+    
+    let googleMapsAction = UIAlertAction(title: "GoogleMaps", style: .default) { [weak self] _ in
+      guard let weakSelf = self else { return }
+      weakSelf.showOnGoogleMaps(serviceStation: station)
+    }
+    
+    let buttonTitle = currentLanguage == .en ? "Build-in maps" : "Вбудовані карти"
+    let localMapsAction = UIAlertAction(title: buttonTitle, style: .default) { [weak self] _ in
+      self?.showBuildInMap(serviceStation: station)
+    }
+    
+    let cancelTitle = currentLanguage == .en ? "Cancel" : "Відмінити"
+    let cancel = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
+    
+    actionSheet.addAction(localMapsAction)
+    actionSheet.addAction(googleMapsAction)
+    actionSheet.addAction(cancel)
+    
+    self.present(actionSheet, animated: true, completion: nil)
+  }
+  
+  func showEmptyPlacesForServiceStationWith(_ id: String) {
+    showActivityIndicator()
+    let serviceStationsManager = ServiceStationsManager(delegate: self)
+    serviceStationsManager.getAmountOfEmptyPlacesForStationWith(id)
+  }
+}
+
+// MARK: - Maps presenter
+private extension ServicesViewController {
+  func showOnGoogleMaps(serviceStation: ServiceStation) {
+    if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(serviceStation.latitude),\(serviceStation.longtitude)&directionsmode=driving") {
+        UIApplication.shared.open(url, options: [:])
+    } else {
+        UIApplication.shared.open(URL(string:
+          "https://www.google.co.in/maps/dir/?saddr=&daddr=\(serviceStation.latitude),\(serviceStation.longtitude)")! as URL)
+    }
+  }
+  
+  func showBuildInMap(serviceStation: ServiceStation) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    guard let destVC = storyboard.instantiateViewController(identifier: "MapViewController") as? MapViewController else {
+      return
+    }
+    destVC.modalPresentationStyle = .fullScreen
+    destVC.destinationPoint = serviceStation
+    self.present(destVC, animated: true, completion: nil)
   }
 }

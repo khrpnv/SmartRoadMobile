@@ -7,23 +7,31 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class ServiceTableViewCell: UITableViewCell {
   
   var serviceStation: ServiceStation?
   
+  private weak var delegate: ServiceTableViewCellDelegate?
+  
   @IBOutlet private weak var nameLabel: UILabel!
   @IBOutlet private weak var descriptionTextView: UITextView!
   @IBOutlet private weak var showOnMapButton: UIButton!
+  @IBOutlet private weak var availabilityButton: UIButton!
   
   override func awakeFromNib() {
     super.awakeFromNib()
   }
   
-  func configureWith(serviceStation: ServiceStation) {
+  func configureWith(serviceStation: ServiceStation, delegate: ServiceTableViewCellDelegate) {
     self.serviceStation = serviceStation
+    self.delegate = delegate
     styleButton(button: showOnMapButton,
                 backgroundColor: #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1),
+                textColor: .white)
+    styleButton(button: availabilityButton,
+                backgroundColor: #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1),
                 textColor: .white)
     nameLabel.text = serviceStation.name
     descriptionTextView.text = serviceStation.description
@@ -37,12 +45,13 @@ class ServiceTableViewCell: UITableViewCell {
   
   @IBAction func showOnMap(_ sender: Any) {
     guard serviceStation != nil else { return }
-    if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(serviceStation!.latitude),\(serviceStation!.longtitude)&directionsmode=driving") {
-        UIApplication.shared.open(url, options: [:])
-    } else {
-        UIApplication.shared.open(URL(string:
-          "https://www.google.co.in/maps/dir/?saddr=&daddr=\(serviceStation!.latitude),\(serviceStation!.longtitude)")! as URL)
-    }
+    delegate?.showMapsAlertActionForStation(serviceStation!)
   }
   
+  @IBAction func showAvailability(_ sender: Any) {
+    if let id = serviceStation?.id {
+      delegate?.showEmptyPlacesForServiceStationWith(id)
+    }
+  }
 }
+

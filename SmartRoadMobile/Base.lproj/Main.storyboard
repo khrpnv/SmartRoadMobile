@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YT0-cc-4hi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qPW-ax-nw2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -553,7 +553,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPd-lw-EM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4356.521739130435" y="106.47321428571428"/>
+            <point key="canvasLocation" x="4493" y="106"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Dq3-1V-Krz">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="FAd-54-5zV" customClass="MapViewController" customModule="SmartRoadMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nbd-Vd-L47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hnI-GE-leI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5T-0N-Egk">
+                                <rect key="frame" x="374" y="54" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2JR-t5-AaM"/>
+                                    <constraint firstAttribute="width" constant="30" id="UoP-8d-jiU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeScreen:" destination="FAd-54-5zV" eventType="touchUpInside" id="eII-Yo-SWd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exc-AR-vG6">
+                                <rect key="frame" x="10" y="51.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="PXd-oh-yUq"/>
+                                    <constraint firstAttribute="width" constant="35" id="Pss-39-0Zl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showInfo:" destination="FAd-54-5zV" eventType="touchUpInside" id="5jq-5V-rSf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="exc-AR-vG6" firstAttribute="centerY" secondItem="V5T-0N-Egk" secondAttribute="centerY" id="EaK-CB-iVM"/>
+                            <constraint firstItem="CmT-2b-sl1" firstAttribute="trailing" secondItem="V5T-0N-Egk" secondAttribute="trailing" constant="10" id="M98-8g-f47"/>
+                            <constraint firstItem="hnI-GE-leI" firstAttribute="leading" secondItem="CmT-2b-sl1" secondAttribute="leading" id="STh-fX-GaU"/>
+                            <constraint firstAttribute="bottom" secondItem="hnI-GE-leI" secondAttribute="bottom" id="T8A-RT-0GZ"/>
+                            <constraint firstItem="hnI-GE-leI" firstAttribute="top" secondItem="Nbd-Vd-L47" secondAttribute="top" id="YRr-oF-TCr"/>
+                            <constraint firstItem="CmT-2b-sl1" firstAttribute="trailing" secondItem="hnI-GE-leI" secondAttribute="trailing" id="e9o-Sk-Q4c"/>
+                            <constraint firstItem="exc-AR-vG6" firstAttribute="leading" secondItem="CmT-2b-sl1" secondAttribute="leading" constant="10" id="efi-LF-daX"/>
+                            <constraint firstItem="V5T-0N-Egk" firstAttribute="top" secondItem="CmT-2b-sl1" secondAttribute="top" constant="10" id="y9f-TQ-NHM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CmT-2b-sl1"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="V5T-0N-Egk" id="GAR-Gi-tjj"/>
+                        <outlet property="infoButton" destination="exc-AR-vG6" id="RIF-vU-0rD"/>
+                        <outlet property="mapView" destination="hnI-GE-leI" id="gN3-7B-tDk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYU-Qi-I8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5634.7826086956529" y="101.78571428571428"/>
         </scene>
     </scenes>
     <resources>

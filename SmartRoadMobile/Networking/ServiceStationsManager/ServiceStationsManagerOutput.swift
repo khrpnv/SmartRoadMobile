@@ -14,4 +14,5 @@ protocol ServiceStationsManagerOutput: class {
   func didGetEmptyListOfStations()
   func didAddServiceStationToBase()
   func didGetErrorsWhileAddingServiceStation(_ message: String?)
+  func didGetAmountOfEmptyPlacesForStation(amount: Int)
 }

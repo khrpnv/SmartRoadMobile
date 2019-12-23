@@ -23,6 +23,7 @@ struct Const {
     static let add = "addButton"
     static let title = "title"
     static let close = "close"
+    static let info = "info"
   }
   
   struct Color {

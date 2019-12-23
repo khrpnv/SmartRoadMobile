@@ -99,4 +99,12 @@ class ServiceStationsManager {
         }
     }
   }
+  
+  func getAmountOfEmptyPlacesForStationWith(_ id: String) {
+    getAmountOfEmptyPlacesAtServiceWith(
+      id,
+      handler: .init(with: { (amount) in
+        self.delegate?.didGetAmountOfEmptyPlacesForStation(amount: amount)
+      }))
+  }
 }

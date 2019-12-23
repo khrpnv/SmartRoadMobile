@@ -145,6 +145,8 @@ private extension AddServiceViewController {
 
 // MARK: - ServiceStationsManagerOutput
 extension AddServiceViewController: ServiceStationsManagerOutput {
+  func didGetAmountOfEmptyPlacesForStation(amount: Int) { return }
+  
   func didFinishLoadingAllServices(services: [ServiceStation]) { return }
   
   func didFinishGettingNearestEmptyServices(services: [ServiceStation]) { return }
