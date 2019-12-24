@@ -28,6 +28,7 @@ class ServicesViewController: UIViewController {
   public var isDriver: Bool = false
   
   private let gradientLayer = CAGradientLayer()
+  private let refreshControl = UIRefreshControl()
   
   @IBOutlet weak var dropDown: DropDown!
   @IBOutlet weak var submitButton: UIButton!
@@ -122,6 +123,16 @@ private extension ServicesViewController {
     tableView.dataSource = self
     let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: cellID)
+    if isDriver {
+      if #available(iOS 10.0, *) {
+        tableView.refreshControl = refreshControl
+      } else {
+        tableView.addSubview(refreshControl)
+      }
+      refreshControl.addTarget(self,
+                               action: #selector(refreshData(_:)),
+                               for: .valueChanged)
+    }
   }
   
   func setupDropDown(placeholder: String) {
@@ -175,9 +186,7 @@ private extension ServicesViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension ServicesViewController: UITableViewDelegate {
-  
-}
+extension ServicesViewController: UITableViewDelegate {}
 
 // MARK: - UITableViewDataSource
 extension ServicesViewController: UITableViewDataSource {
@@ -238,6 +247,7 @@ extension ServicesViewController: ServiceStationsManagerOutput {
   
   func didFinishGettingNearestEmptyServices(services: [ServiceStation]) {
     updateDataSource(stations: services)
+    refreshControl.endRefreshing()
     if services.count == 0 {
       showToast(message: "Nothing suitable has been found")
     }
@@ -245,6 +255,7 @@ extension ServicesViewController: ServiceStationsManagerOutput {
   
   func didGetEmptyListOfStations() {
     hideActivityIndicator()
+    refreshControl.endRefreshing()
     showToast(message: "Nothing suitable has been found")
   }
   
@@ -330,5 +341,13 @@ private extension ServicesViewController {
     destVC.modalPresentationStyle = .fullScreen
     destVC.destinationPoint = serviceStation
     self.present(destVC, animated: true, completion: nil)
+  }
+}
+
+// MARK: - Refresh handler
+extension ServicesViewController {
+  @objc private func refreshData(_ sender: Any) {
+    let serviceStationsManager = ServiceStationsManager(delegate: self)
+    serviceStationsManager.getNearestEmptyServicesOfTypeWith(selectedType, startLat: currentLat, startLong: currentLong, range: range)
   }
 }
