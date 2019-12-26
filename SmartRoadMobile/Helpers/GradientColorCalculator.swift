@@ -38,6 +38,9 @@ struct RGB {
   }
   
   static func +(left: RGB, right: RGB) -> RGB {
+    if left.red + right.red > 1 || left.green + right.green > 1 || left.blue + right.blue > 1 {
+      return RGB(red: left.red, green: left.green, blue: left.blue)
+    }
     return RGB(red: left.red + right.red,
                green: left.green + right.green,
                blue: left.blue + right.blue)
