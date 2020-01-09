@@ -17,4 +17,15 @@ struct ServiceType: Codable {
     self.id = object["id"].intValue
     self.typeName = object["typeName"].stringValue
   }
+  
+  init(typeName: String) {
+    self.id = -1
+    self.typeName = typeName
+  }
+  
+  func convertToParameters() -> [String: Any] {
+    return [
+      "typeName": self.typeName
+    ]
+  }
 }

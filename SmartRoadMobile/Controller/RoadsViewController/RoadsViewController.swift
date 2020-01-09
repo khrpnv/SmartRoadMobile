@@ -23,7 +23,7 @@ class RoadsViewController: UIViewController {
   // MARK: - Outlets
   @IBOutlet private weak var chartView: LineChartView!
   @IBOutlet private weak var tableView: UITableView!
-  @IBOutlet weak var closeButton: UIButton!
+  @IBOutlet private weak var closeButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()

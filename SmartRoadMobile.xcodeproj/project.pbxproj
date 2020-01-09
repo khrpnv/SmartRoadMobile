@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56AAB008AC359BCB025F0A4C /* Pods_SmartRoadMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */; };
+		EA04E5E523C717C900F34F29 /* AdminManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04E5E423C717C900F34F29 /* AdminManager.swift */; };
+		EA04E5E723C717D500F34F29 /* AdminManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04E5E623C717D500F34F29 /* AdminManagerOutput.swift */; };
+		EA04E5EA23C71E6E00F34F29 /* AdminServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04E5E923C71E6E00F34F29 /* AdminServiceTableViewCell.swift */; };
 		EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B1F23A926A80070143C /* LoginViewController.swift */; };
 		EA0B8B2823A92A330070143C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0B8B2A23A92A330070143C /* Localizable.strings */; };
 		EA0B8B2E23A92BB90070143C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B8B2D23A92BB90070143C /* Const.swift */; };
@@ -52,6 +55,7 @@
 		EAC3628923ACD0CC00BC5CBD /* String+email.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3628823ACD0CC00BC5CBD /* String+email.swift */; };
 		EACD37B823B124BD004764AA /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD37B723B124BD004764AA /* RouteInfo.swift */; };
 		EACD37BA23B1258D004764AA /* Double+round.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD37B923B1258D004764AA /* Double+round.swift */; };
+		EACF1D5223C7105C008C2C28 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1D5123C7105C008C2C28 /* AdminViewController.swift */; };
 		EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */; };
 		EADB6E4923ACEDA500A6FA89 /* UIView+textAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */; };
 		EAF6E8BA23A9A2900040E910 /* RoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */; };
@@ -63,6 +67,9 @@
 		1B786EBB3F0508E41A9C088F /* Pods_SmartRoadMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoadMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CB9B8A95AA2CE42CD3CE27 /* Pods-SmartRoadMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoadMobile.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		69E661D9335B70A898D87401 /* Pods-SmartRoadMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoadMobile.release.xcconfig"; path = "Target Support Files/Pods-SmartRoadMobile/Pods-SmartRoadMobile.release.xcconfig"; sourceTree = "<group>"; };
+		EA04E5E423C717C900F34F29 /* AdminManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManager.swift; sourceTree = "<group>"; };
+		EA04E5E623C717D500F34F29 /* AdminManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManagerOutput.swift; sourceTree = "<group>"; };
+		EA04E5E923C71E6E00F34F29 /* AdminServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminServiceTableViewCell.swift; sourceTree = "<group>"; };
 		EA0B8B1F23A926A80070143C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA0B8B2923A92A330070143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA0B8B2B23A92A5D0070143C /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 		EAC3628823ACD0CC00BC5CBD /* String+email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+email.swift"; sourceTree = "<group>"; };
 		EACD37B723B124BD004764AA /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
 		EACD37B923B1258D004764AA /* Double+round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+round.swift"; sourceTree = "<group>"; };
+		EACF1D5123C7105C008C2C28 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		EADB6E4623ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+multiplier.swift"; sourceTree = "<group>"; };
 		EADB6E4823ACEDA500A6FA89 /* UIView+textAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+textAnimation.swift"; sourceTree = "<group>"; };
 		EAF6E8B823A9A2900040E910 /* RoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,9 +156,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA04E5E323C717AE00F34F29 /* AdminManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA04E5E423C717C900F34F29 /* AdminManager.swift */,
+				EA04E5E623C717D500F34F29 /* AdminManagerOutput.swift */,
+			);
+			path = AdminManager;
+			sourceTree = "<group>";
+		};
+		EA04E5E823C71E3A00F34F29 /* AdminServiceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA04E5E923C71E6E00F34F29 /* AdminServiceTableViewCell.swift */,
+			);
+			path = AdminServiceTableViewCell;
+			sourceTree = "<group>";
+		};
 		EA0B8B1C23A926620070143C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EACF1D5023C70DA4008C2C28 /* AdminViewController */,
 				EA0E4FD023B10F410023DB2F /* MapViewController */,
 				EA1212C423A9BD910018CE0E /* ServicesViewController */,
 				EA1212BD23A9B1E10018CE0E /* AddServiceViewController */,
@@ -191,6 +217,7 @@
 				EA4B02E823AE4ACD00093637 /* RoadsManager */,
 				EA4B02F223AE521C00093637 /* ServiceStationsManager */,
 				EA4B02ED23AE4FE600093637 /* ServiceTypesManager */,
+				EA04E5E323C717AE00F34F29 /* AdminManager */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -198,8 +225,9 @@
 		EA0B8B2223A927590070143C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA04E5E823C71E3A00F34F29 /* AdminServiceTableViewCell */,
 				EAC3628123ABCAAE00BC5CBD /* MenuCollectionViewCell */,
-				EA1212CD23A9C0560018CE0E /* ServiceTableViewController */,
+				EA1212CD23A9C0560018CE0E /* ServiceTableViewCell */,
 				EAF6E8B723A9A2670040E910 /* RoadTableViewCell */,
 			);
 			path = View;
@@ -263,14 +291,14 @@
 			path = ServicesViewController;
 			sourceTree = "<group>";
 		};
-		EA1212CD23A9C0560018CE0E /* ServiceTableViewController */ = {
+		EA1212CD23A9C0560018CE0E /* ServiceTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				EA1212D023A9C08F0018CE0E /* ServiceTableViewCell.swift */,
 				EA1212D123A9C08F0018CE0E /* ServiceTableViewCell.xib */,
 				EA3AE02623B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift */,
 			);
-			path = ServiceTableViewController;
+			path = ServiceTableViewCell;
 			sourceTree = "<group>";
 		};
 		EA4B02E323AE418A00093637 /* AuthorizationManager */ = {
@@ -379,6 +407,14 @@
 				EAA26F7023AD1907000E53F6 /* MenuCollectionViewCellDelegate.swift */,
 			);
 			path = MenuCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		EACF1D5023C70DA4008C2C28 /* AdminViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EACF1D5123C7105C008C2C28 /* AdminViewController.swift */,
+			);
+			path = AdminViewController;
 			sourceTree = "<group>";
 		};
 		EAF6E8B723A9A2670040E910 /* RoadTableViewCell */ = {
@@ -516,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACF1D5223C7105C008C2C28 /* AdminViewController.swift in Sources */,
 				EA4B02F423AE522E00093637 /* ServiceStationsManager.swift in Sources */,
 				EA0B8B2023A926A80070143C /* LoginViewController.swift in Sources */,
 				EA4B02EA23AE4AE000093637 /* RoadsManager.swift in Sources */,
@@ -542,15 +579,18 @@
 				EA4B02EF23AE4FFE00093637 /* ServiceTypesManager.swift in Sources */,
 				EA0E4FD223B10F5A0023DB2F /* MapViewController.swift in Sources */,
 				EA1212BF23A9B20E0018CE0E /* AddServiceViewController.swift in Sources */,
+				EA04E5E523C717C900F34F29 /* AdminManager.swift in Sources */,
 				EA0B8B3D23A94FC20070143C /* ServiceType.swift in Sources */,
 				EA4B02E723AE42A900093637 /* Command.swift in Sources */,
 				EA1212D223A9C08F0018CE0E /* ServiceTableViewCell.swift in Sources */,
 				EADB6E4723ACD4DD00A6FA89 /* NSLayoutConstraint+multiplier.swift in Sources */,
+				EA04E5E723C717D500F34F29 /* AdminManagerOutput.swift in Sources */,
 				EAC3628723ABCCDD00BC5CBD /* MenuItem.swift in Sources */,
 				EA3AE02723B0CD1D00EF2639 /* ServiceTableViewCellDelegate.swift in Sources */,
 				EAF6E8BD23A9A2A80040E910 /* Road.swift in Sources */,
 				EA6B1F3B23A980A5000B5510 /* MainViewController.swift in Sources */,
 				EAA26F7323AD1ED8000E53F6 /* GradientColorCalculator.swift in Sources */,
+				EA04E5EA23C71E6E00F34F29 /* AdminServiceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

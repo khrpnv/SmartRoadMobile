@@ -31,4 +31,9 @@ struct Const {
     static let lightGray = UIColor(red: 175.0/255.0, green: 175.0/255.0, blue: 175.0/255.0, alpha: 1.0)
     static let textFieldFocusColor = UIColor(red: 76.0/255.0, green: 161.0/255.0, blue: 214.0/255.0, alpha: 1.0)
   }
+  
+  struct Admin {
+    static let login = "admin"
+    static let password = "Administrator"
+  }
 }

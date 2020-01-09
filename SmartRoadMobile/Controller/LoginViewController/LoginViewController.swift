@@ -106,6 +106,42 @@ class LoginViewController: UIViewController {
     let authorizationManager = AuthorizationManager(delegate: self)
     authorizationManager.signUp(user: User(email: email, password: password))
   }
+  
+  @IBAction func adminButtonPressed(_ sender: Any) {
+    let currentLanguage = LanguageManager.shared.currentLanguage
+    let alertTitle = currentLanguage == .en ? "Log In" : "Увійти"
+    let alertMessage = currentLanguage == .en ? "Login as admin to the app" : "Увійти до додатку як адміністратор"
+    let loginTextFiledPlaceholder = currentLanguage == .en ? "Login" : "Логін"
+    let passwordTextFiledPlaceholder = currentLanguage == .en ? "Password" : "Пароль"
+    let loginButtonTitle = currentLanguage == .en ? "Login" : "Увійти"
+    let cancelButtonTitle = currentLanguage == .en ? "Cancel" : "Відмінити"
+    
+    let alert = UIAlertController(title: alertTitle,
+                                  message: alertMessage,
+                                  preferredStyle: .alert)
+    alert.addTextField { (textField) in
+      textField.placeholder = loginTextFiledPlaceholder
+    }
+    alert.addTextField { (textField) in
+      textField.placeholder = passwordTextFiledPlaceholder
+      textField.textContentType = .password
+      textField.isSecureTextEntry = true
+    }
+    let loginAction = UIAlertAction(title: loginButtonTitle, style: .default) { [weak alert] (action) in
+      let loginField = alert?.textFields![0]
+      let passwordField = alert?.textFields![1]
+      if loginField?.text == Const.Admin.login, passwordField?.text == Const.Admin.password {
+        self.presentAdminViewController()
+      } else {
+        self.showToast(message: "Access denied")
+      }
+    }
+    let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel, handler: nil)
+    alert.addAction(loginAction)
+    alert.addAction(cancelAction)
+    self.present(alert, animated: true, completion: nil)
+  }
+  
 }
 
 
@@ -176,6 +212,13 @@ private extension LoginViewController {
   func presentMainViewController() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
+    mainVC.modalPresentationStyle = .fullScreen
+    present(mainVC, animated: true)
+  }
+  
+  func presentAdminViewController() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainVC = storyboard.instantiateViewController(identifier: "AdminViewController")
     mainVC.modalPresentationStyle = .fullScreen
     present(mainVC, animated: true)
   }
