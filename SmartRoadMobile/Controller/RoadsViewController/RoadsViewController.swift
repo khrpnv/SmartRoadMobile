@@ -12,6 +12,7 @@ import Charts
 import Toast_Swift
 
 class RoadsViewController: UIViewController {
+  private var roadsManager: RoadsManager?
   private var roads: [Road] = [] {
     didSet {
       tableView.reloadData()
@@ -29,8 +30,8 @@ class RoadsViewController: UIViewController {
     super.viewDidLoad()
     setupView()
     setupTableView()
-    let roadsManager = RoadsManager(delegate: self)
-    roadsManager.getRoadsData()
+    roadsManager = RoadsManager(delegate: self)
+    roadsManager?.getRoadsData()
     showActivityIndicator()
   }
 

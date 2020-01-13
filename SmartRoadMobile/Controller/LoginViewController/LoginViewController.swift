@@ -12,6 +12,7 @@ import Toast_Swift
 
 class LoginViewController: UIViewController {
   // MARK: - Properties
+  private var authorizationManager: AuthorizationManager?
   private let gradientLayer = CAGradientLayer()
   private let topGradientColor = UIColor(red: 37.0/255.0,
                                          green: 37.0/255.0,
@@ -34,6 +35,7 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    authorizationManager = AuthorizationManager(delegate: self)
     setupView()
     setupDelegates()
   }
@@ -85,8 +87,7 @@ class LoginViewController: UIViewController {
       return
     }
     showActivityIndicator()
-    let authorizationManager = AuthorizationManager(delegate: self)
-    authorizationManager.logIn(user: User(email: email, password: password))
+    authorizationManager?.logIn(user: User(email: email, password: password))
   }
   
   @IBAction func signupPressed(_ sender: Any) {
@@ -103,8 +104,7 @@ class LoginViewController: UIViewController {
       return
     }
     showActivityIndicator()
-    let authorizationManager = AuthorizationManager(delegate: self)
-    authorizationManager.signUp(user: User(email: email, password: password))
+    authorizationManager?.signUp(user: User(email: email, password: password))
   }
   
   @IBAction func adminButtonPressed(_ sender: Any) {

@@ -12,6 +12,8 @@ import iOSDropDown
 import Toast_Swift
 
 class AddServiceViewController: UIViewController {
+  private var serviceTypesManager: ServiceTypesManager?
+  private var serviceStationsManager: ServiceStationsManager?
   private var serviceTypes: [ServiceType] = []
   private var selectedIndex: Int = -1
   private let gradientLayer = CAGradientLayer()
@@ -29,8 +31,8 @@ class AddServiceViewController: UIViewController {
     setupView()
     setupInputFieldsDelegates()
     showActivityIndicator()
-    let serviceTypesManager = ServiceTypesManager(delegate: self)
-    serviceTypesManager.getAllServiceTypes()
+    serviceTypesManager = ServiceTypesManager(delegate: self)
+    serviceTypesManager?.getAllServiceTypes()
   }
   
   @IBAction func submitButtonPressed(_ sender: Any) {
@@ -57,8 +59,7 @@ class AddServiceViewController: UIViewController {
       longtitude: longitude,
       type: selectedIndex)
     showActivityIndicator()
-    let serviceStationsManager = ServiceStationsManager(delegate: self)
-    serviceStationsManager.addService(service: serviceStation)
+    serviceStationsManager?.addService(service: serviceStation)
   }
   
   @IBAction func closeScreen(_ sender: Any) {

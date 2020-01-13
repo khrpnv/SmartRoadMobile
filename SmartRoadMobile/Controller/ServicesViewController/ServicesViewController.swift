@@ -18,6 +18,8 @@ class ServicesViewController: UIViewController {
       tableView.reloadData()
     }
   }
+  private var serviceTypesManager: ServiceTypesManager?
+  private var serviceStationsManager: ServiceStationsManager?
   private let cellID = "CellID"
   private var selectedType: Int = -1
   private let locationManager = CLLocationManager()
@@ -44,8 +46,9 @@ class ServicesViewController: UIViewController {
     setupView()
     setupTableView()
     showActivityIndicator()
-    let serviceTypesManager = ServiceTypesManager(delegate: self)
-    serviceTypesManager.getAllServiceTypes()
+    serviceStationsManager = ServiceStationsManager(delegate: self)
+    serviceTypesManager = ServiceTypesManager(delegate: self)
+    serviceTypesManager?.getAllServiceTypes()
     if isDriver {
       setupLocationManager()
     }
@@ -57,12 +60,11 @@ class ServicesViewController: UIViewController {
       return
     }
     showActivityIndicator()
-    let serviceStationsManager = ServiceStationsManager(delegate: self)
     switch isDriver {
     case true:
-      serviceStationsManager.getNearestEmptyServicesOfTypeWith(selectedType, startLat: currentLat, startLong: currentLong, range: range)
+      serviceStationsManager?.getNearestEmptyServicesOfTypeWith(selectedType, startLat: currentLat, startLong: currentLong, range: range)
     case false:
-      serviceStationsManager.getAllServicesOfType(selectedType)
+      serviceStationsManager?.getAllServicesOfType(selectedType)
     }
   }
   
